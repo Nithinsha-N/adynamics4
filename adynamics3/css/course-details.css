@@ -1,0 +1,71 @@
+.hero-btn-course-details {
+  background-color: #49aaaa;
+  color: rgba(255, 255, 255, 0.851);
+  font-weight: 800;
+  border: none;
+}
+.hero-btn-course-details:hover {
+  background-color: #75d5d5;
+  color: white;
+}
+
+.course-feature-head {
+  color: #255252;
+}
+
+.course-feature-value {
+  font-weight: 500;
+}
+
+.course-feature-wrapper {
+  background-color: #f0f2f4db;
+}
+
+.imPart-bg {
+  background-color: #f0f2f4db;
+}
+
+@media (min-width: 1400px) {
+  .course-feature-wrapper {
+    margin: 0 2rem;
+  }
+}
+ /* about us css */
+
+ .about-class-Img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.about-class-imgarea {
+  flex: 0 0 1;
+  min-width: 40%;
+  width: 110%;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .about-class-imgarea {
+    width: 120%;
+  }
+}
+
+
+/* counter css  */
+.counter-section i { display:block; margin:0 0 10px}
+.counter-section span.counter { font-size:40px; color:#000; line-height:60px; display:block;  letter-spacing: 2px}
+.counter-title{ font-size:12px; letter-spacing:2px; text-transform: uppercase;}
+.counter-icon {top:25px; position:relative}
+.counter-style2 .counter-title {letter-spacing: 0.55px; float: left;}
+.counter-style2 span.counter {letter-spacing: 0.55px; float: left; margin-right: 10px;}
+.counter-style2 i {float: right; line-height: 26px; margin: 0 10px 0 0}
+.counter-subheadline span {float: right;}  
+
+.medium-icon {
+    font-size: 40px !important;
+    margin-bottom: 15px !important;
+} 
+.che  :hover{
+  color: white;
+}
