@@ -49,8 +49,14 @@
   .about-class-imgarea {
     width: 120%;
   }
+ 
 }
 
+@media screen and (max-width: 600px) {
+  .chec{
+    display: none;
+  }
+}
 
 /* counter css  */
 .counter-section i { display:block; margin:0 0 10px}
@@ -69,3 +75,4 @@
 .che  :hover{
   color: white;
 }
+
