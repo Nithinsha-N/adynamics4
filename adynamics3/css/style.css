@@ -39,6 +39,10 @@
   opacity: 1;
 }
 
+nav {
+  box-shadow: #49aaaa 0px 0px 10px 0px;
+}
+
 /*** Button ***/
 
 .navbar-toggleBtn {
@@ -415,4 +419,119 @@
   margin-bottom: 15px !important;
 }
 
+.enquiry-button-nav {
+  width: 12rem;
+  height: 7rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  position: relative;
+  transition: 1.5s;
+  border: none;
+  filter: none;
+  background-color: #fff;
+}
 
+.enquiry-button-nav h2 {
+  z-index: 2;
+  color: #1e1e1e;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 26px;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.enquiry-button-nav img {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  margin-left: -5.5rem;
+  bottom: 0;
+  left: 0;
+  translate: 1s;
+}
+
+.enquiry-button-nav:hover {
+  img {
+    transform: translateX(50rem);
+    transition: 5s;
+  }
+  h2 {
+    color: #49aaaa;
+    transition: 1.5s;
+    font-size: 1.3rem;
+    margin-top: -1rem;
+    font-weight: 600;
+  }
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #49aaaa; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #49aaaa;
+  }
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: max-content;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px #49aaaa;
+  border-radius: 1rem;
+}
+
+.dropdown:hover .dropdown-menu a {
+  color: #000;
+  font-size: 1rem;
+  padding: 0.2rem;
+  font-weight: 500;
+}
+
+.dropdown:hover .dropdown-menu a:hover {
+  color: #49aaaa;
+}
+
+.hero-banner {
+  width: 30rem;
+  height: auto;
+}
+
+.hero {
+  background-color: #006dda;
+}

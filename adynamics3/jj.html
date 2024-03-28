@@ -31,11 +31,11 @@
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="css2/style.css">
+  <link rel="stylesheet" href="scss/follower.scss">
   <link rel="stylesheet" href="check.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
-   
+  <style>   
 .hori-timeline .events {
     border-top: 3px solid #e9ecef;
 }
@@ -65,34 +65,66 @@
 }
 @media (min-width: 1140px) {
     .hori-timeline .events .event-list {
+      display: block;
+      position: relative;
+      text-align: center;
+      padding-top: 70px;
+      margin-right: 0;
+    }
+
+    .hori-timeline .events .event-list:before {
+      content: "";
+      position: absolute;
+      height: 36px;
+      border-right: 2px dashed #dee2e6;
+      top: 0;
+    }
+
+    .hori-timeline .events .event-list .event-date {
+      position: absolute;
+      top: 38px;
+      left: 0;
+      right: 0;
+      width: 75px;
+      margin: 0 auto;
+      border-radius: 4px;
+      padding: 2px 4px;
+    }
+
+    @media (min-width: 1140px) {
+      .hori-timeline .events .event-list {
         display: inline-block;
         width: 40%;
         padding-top: 45px;
-    }
-    .hori-timeline .events .event-list .event-date {
+      }
+
+      .hori-timeline .events .event-list .event-date {
         top: -12px;
+      }
     }
-}
-.bg-soft-primary {
-    background-color: rgba(64,144,203,.3)!important;
-}
-.bg-soft-success {
-    background-color: rgba(71,189,154,.3)!important;
-}
-.bg-soft-danger {
-    background-color: rgba(231,76,94,.3)!important;
-}
-.bg-soft-warning {
-    background-color: rgba(249,213,112,.3)!important;
-}
-.card {
-    border: none;
-    margin-bottom: 24px;
-    -webkit-box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
-    box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
-}
 
+    .bg-soft-primary {
+      background-color: rgba(64, 144, 203, .3) !important;
+    }
 
+    .bg-soft-success {
+      background-color: rgba(71, 189, 154, .3) !important;
+    }
+
+    .bg-soft-danger {
+      background-color: rgba(231, 76, 94, .3) !important;
+    }
+
+    .bg-soft-warning {
+      background-color: rgba(249, 213, 112, .3) !important;
+    }
+
+    .card {
+      border: none;
+      margin-bottom: 24px;
+      -webkit-box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
+      box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
+    }
   </style>
 </head>
 
@@ -153,11 +185,23 @@
             <a href="jj.html" class="nav-item nav-link active">Home</a>
             <a href="testComponents/about-hero.html" class="nav-item nav-link ">About</a>
             <a href="testComponents/cource-aboutpage.html" class="nav-item nav-link">Flying</a>
-            <a href="testComponents/clasess.html" class="nav-item nav-link  ">Classes</a>
+            <div class="dropdown">
+              <a href="testComponents/clasess.html" class="nav-item nav-link nav-dropdown ">Classes</a>
+              <div class="dropdown-menu">
+                <a href="inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
+                <a href="course-details.html">DGca CPL Classes</a>
+                <a href="inidvidual-clases/RTR.html">Radio Telephony (rtr) Class</a>
+                <a href="inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
+              </div>
+            </div>
             <a href="blog/homepageblog.html" class="nav-item nav-link">blog</a>
           </div>
-          <a style="background-color: #49aaaa;height: auto;padding: 0px;font-size: 1em;" href=""
-            class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">ENQUIRY<i  style="margin-left: 20px; background: url("./img/7329824.jpg"); "></i></a>
+          <!-- <a style="background-color: #49aaaa;height: auto; font-size: 1em;" href=""
+            class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">ENQUIRY<i class="fa fa-arrow-right ms-3"></i></a> -->
+          <button class="enquiry-button-nav">
+            <img src="assets/img/enquiry.png" alt="">
+            <h2>ENQUIRY</h2>
+          </button>
         </div>
   </nav>
 
@@ -166,17 +210,18 @@
   <!-- 
         - #HERO
       -->
-
   <section class="section hero" id="home" aria-label="hero">
     <div class="container" style="margin-top: -7%;">
 
       <div class="hero-content">
 
-        <p class="hero-subtitle has-before">Wellcome to ADynamics</p>
+        <p class="hero-subtitle has-before ">Welcome to ADynamics</p>
 
-        <h1 class="h1 hero-title">Ready to Awaken the Aviator in You?</h1>
+        <div class="typewriter">
+          <h1 class="h1 hero-title">Ready to Awaken the Aviator in You?</h1>
+        </div>
 
-        <p class=" hero-text" >
+        <p class=" hero-text">
           Elevate your pilot journey with ADynamics – where a comprehensive curriculum, experienced instructors, and
           global partnerships converge. From in-depth training to seamless career support, we're your catalyst for
           aviation success.
@@ -198,7 +243,7 @@
       </div>
 
       <figure class="has-before hero-banner" style="--width: 650; --height: 650; margin-left: 40px;">
-        <img src="./img/hero-pilot.jpg" width="400px" height="100px" alt="hero banner" class="img-cover  "
+        <img src="./img/hero-pilot.jpg" width="400px" height="100px" alt="hero banner" class="img-cover  hero-banner"
           style="border-radius: 50%; width: 100%; ">
       </figure>
 
@@ -236,7 +281,7 @@
               <div class="ps-4">
                 <h5>Elite Instructors, Expert Pilots</h5>
                 <span>Experience training led by seasoned pilots, ensuring excellence in preparation for your aviation
-                  career journey.</span>
+                  career.</span>
               </div>
             </div>
           </div>
@@ -269,19 +314,21 @@
         <div class="section_heading text-center">
           <h6 class="text-primary text-uppercase mb-2">Trending Courses</h6>
           <h1 class="display-6 mb-4" ">
-                      Aviator RoadMap & Global Flight Training Hubs
+                      Aviator RoadMap & Global Flight Training 
                     </h1>
                     <div class=" line">
         </div>
       </div>
     </div>
-  </div>
+    </div>
 
     <div class="cd-h-timeline__container container" style="margin-top: 6%;">
       <div class="cd-h-timeline__dates">
         <div class="cd-h-timeline__line">
           <ol>
-            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">CPL Training</a></li>
+            <li><a href="#0" data-date="16/01/2014" class="cd-h-timeline__date cd-h-timeline__date--selected">
+                STEPS TO BECOME A PILOT</a></li>
+            </a></li>
             <li><a href="#0" data-date="28/02/2014" class="cd-h-timeline__date">TYPE RATING</a></li>
             <li><a href="#0" data-date="20/04/2014" class="cd-h-timeline__date">CPL GROUND TRAINING</a></li>
             <!-- <li><a href="#0" data-date="20/05/2014" class="cd-h-timeline__date">20 May</a></li> -->
@@ -297,9 +344,11 @@
           <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
         </div> <!-- .cd-h-timeline__line -->
       </div> <!-- .cd-h-timeline__dates -->
-        
+
       <ul>
-        <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
+        <li><a href="#0"
+            class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a>
+        </li>
         <li><a href="#0" class="text-replace cd-h-timeline__navigation cd-h-timeline__navigation--next">Next</a></li>
       </ul>
     </div> <!-- .cd-h-timeline__container -->
@@ -310,216 +359,287 @@
           <div class="col-12 col-lg-12">
             <!-- Timeline Area-->
             <div class="apland-timeline-area">
-                <!-- Single Timeline Content-->
-                <div class="single-timeline-area">
-                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                        <p>State 1</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-10 col-lg-8">
-                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                
-                                <div class="timeline-text">
-                                    <h6>UNITED STATE OF AMERICA</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                      
-                    </div>
-                </div>
-                <!-- Single Timeline Content-->
-                <div class="single-timeline-area">
-                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                        <p>State 2</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-10 col-lg-8">
-                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                
-                                <div class="timeline-text">
-                                    <h6>CANADA</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Timeline Content-->
-                <div class="single-timeline-area">
-                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                        <p>STATE 3</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-10 col-lg-8">
-                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                               
-                                <div class="timeline-text">
-                                    <h6>NEW ZEALAND</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                      
-                        <div class="col-12 col-md-6 col-lg-4">
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="single-timeline-area">
-                  <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                      <p>SATE 4</p>
-                  </div>
-                  <div class="row">
-                      <div class="col-12 col-md-10 col-lg-8">
-                          <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                             
-                              <div class="timeline-text">
-                                  <h6>SOUTH AFRICA</h6>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                              </div>
-                          </div>
-                      </div>
-                    
-                      <div class="col-12 col-md-6 col-lg-4">
-                         
-                      </div>
-                  </div>
-              </div>
+              <!-- Single Timeline Content-->
               <div class="single-timeline-area">
-                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                    <p>STATE 5</p>
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>Step 1</p>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-10 col-lg-8">
-                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                           
-                            <div class="timeline-text">
-                                <h6>TUNISIA</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>Research Pilot Schools</h6>
+                        <p>The first step to become a private or commercial pilot is to research your flight training
+                          options.</p>
+                      </div>
                     </div>
-                  
-                    <div class="col-12 col-md-6 col-lg-4">
-                       
-                    </div>
+                  </div>
+
+
                 </div>
+              </div>
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>Step 2</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>Take an Admissions Flight</h6>
+                        <p>Completion of an Admissions Flight is a prerequisite for enrolling in pilot training,
+                          offering insight into training, aircraft, and instruction. </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>Step 3</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>Apply for FAA Medical Certificate</h6>
+                        <p>Pilots must meet medical standards. Professional pilots require a higher class medical
+                          certificate obtained from an Aeromedical Examiner (AME).</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>Step 4</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>Apply for FAA Student Pilot Certificate</h6>
+                        <p>Apply for a student pilot certificate through the FAA's Integrated Airman Certification and
+                          Rating Application (IACRA) website.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>Step 5</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>Start Flight Training Lessons</h6>
+                        <p>Start taking flight training lessons and begin working towards obtaining the aeronautical
+                          knowledge and pilot training experience requirements needed to become a private pilot.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>Step 6</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>Pass Private Pilot Knowledge Test</h6>
+                        <p>During your private pilot flight training, you will need to take and pass the computer-based
+                          FAA private pilot knowledge test. To be eligible for the test, you must receive an endorsement
+                          from your flight instructor.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>Step 7</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>Pass Private Pilot Practical Exam</h6>
+                        <p>The final step in earning your FAA private pilot certificate is to take a practical exam with
+                          a Designated Pilot Examiner (DPE). This exam consists of both an oral and a flight portion,
+                          and once completed you will be a private pilot.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         </li>
 
         <li class="cd-h-timeline__event text-component">
-        <!-- Section: Timeline -->
-        <div class="col-12 col-lg-12">
-          <div class="apland-timeline-area">
-            <!-- Single Timeline Content-->
-            <div class="single-timeline-area">
-                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                    
+          <!-- Section: Timeline -->
+          <div class="col-12 col-lg-12">
+            <div class="apland-timeline-area">
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-10 col-lg-8">
-                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                            
-                            <div class="timeline-text">
-                              <h5 class="fw-bold">Pre-Type Rating Classes</h5>
-                              <p class="text-muted mb-2 fw-bold"> </p>
-                              <p class="text-muted">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                necessitatibus adipisci, ad alias, voluptate pariatur officia
-                                repellendus repellat inventore fugit perferendis totam dolor
-                                voluptas et corrupti distinctio maxime corporis optio?
-                              </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                  
-                </div>
-            </div>
-            <!-- Single Timeline Content-->
-            <div class="single-timeline-area">
-                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                   
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-10 col-lg-8">
-                       
-                      <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                        <div class="timeline-text" ">
-                          <h5 class="fw-bold">Type Rating Cource</h5>
-                            <p class="text-muted mb-2 fw-bold"> </p>
-                            <p class="text-muted">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                              necessitatibus adipisci, ad alias, voluptate pariatur officia
-                              repellendus repellat inventore fugit perferendis totam dolor
-                              voluptas et corrupti distinctio maxime corporis optio?
-                            </p>
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h5 class="fw-bold">Pre-Type Rating Classes</h5>
+                        <p class="text-muted mb-2 fw-bold"> </p>
+                        <p class="text-muted">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                          necessitatibus adipisci, ad alias, voluptate pariatur officia
+                          repellendus repellat inventore fugit perferendis totam dolor
+                          voluptas et corrupti distinctio maxime corporis optio?
+                        </p>
                       </div>
-                        
-              
-                           
-                        </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        
-                    </div>
+                  </div>
+
+
                 </div>
-            </div>
-            <!-- Single Timeline Content-->
-            <div class="single-timeline-area">
-                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                 
+              </div>
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-10 col-lg-12">
-                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                           
-                          <div class="hori-timeline" dir="ltr">
+                  <div class="col-12 col-md-10 col-lg-8">
 
-                            <ul class="list-inline events">
-                                <li class="list-inline-item event-list">
-                                    <div class="px-4">
-                                        
-                                        <h5 class="font-size-16" > AIRBUS A320</h5>
-                                        <p class="text-muted"style="margin-top: 20px;" >It will be as simple as occidental in fact it will be Occidental Cambridge friend</p>
-                                        <div>
-                                            <a href="#"  style="width: 150px;">.</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-inline-item event-list">
-                                    <div class="px-4">
-                                        <h5 class="font-size-16">BOEING 737</h5>
-                                        <p class="text-muted" style="margin-top: 20px;">Everyone realizes why a new common language one could refuse translators.</p>
-                                        <div>
-                                            <a href="#"  style="width: 150px;">.</a>
-                                        </div>
-                                    </div>
-                                </li>
-                              
-                                
-                            </ul>
-                        </div>
-                        </div>
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                      <div class="timeline-text" ">
+                          <h5 class=" fw-bold">Type Rating Cource</h5>
+                        <p class="text-muted mb-2 fw-bold"> </p>
+                        <p class="text-muted">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                          necessitatibus adipisci, ad alias, voluptate pariatur officia
+                          repellendus repellat inventore fugit perferendis totam dolor
+                          voluptas et corrupti distinctio maxime corporis optio?
+                        </p>
+                      </div>
+
+
+
                     </div>
-                  
-                    <div class="col-12 col-md-6 col-lg-4">
-                       
-                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
                 </div>
-            </div>
-           
-        </div>
-        </div>
+              </div>
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
 
-<!-- Section: Timeline -->
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-12">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="hori-timeline" dir="ltr">
+
+                        <ul class="list-inline events">
+                          <li class="list-inline-item event-list">
+                            <div class="px-4">
+
+                              <h5 class="font-size-16"> AIRBUS A320</h5>
+                              <p class="text-muted" style="margin-top: 20px;">It will be as simple as occidental in fact
+                                it will be Occidental Cambridge friend</p>
+                              <div>
+                                <a href="#" style="width: 150px;">.</a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="list-inline-item event-list">
+                            <div class="px-4">
+                              <h5 class="font-size-16">BOEING 737</h5>
+                              <p class="text-muted" style="margin-top: 20px;">Everyone realizes why a new common
+                                language one could refuse translators.</p>
+                              <div>
+                                <a href="#" style="width: 150px;">.</a>
+                              </div>
+                            </div>
+                          </li>
+
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section: Timeline -->
         </li>
 
         <li class="cd-h-timeline__event text-component">
@@ -527,142 +647,155 @@
             <div class="apland-timeline-area">
               <!-- Single Timeline Content-->
               <div class="single-timeline-area">
-                  <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                      
-                  </div>
-                  <div class="row">
-                      <div class="col-12 col-md-10 col-lg-8">
-                          <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                              
-                              <div class="timeline-text">
-                                <h5 class="fw-bold">DGCA</h5>
-                                <p class="text-muted mb-2 fw-bold"> </p>
-                                <p class="text-muted">
-                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                                  necessitatibus adipisci, ad alias, voluptate pariatur officia
-                                  repellendus repellat inventore fugit perferendis totam dolor
-                                  voluptas et corrupti distinctio maxime corporis optio?
-                                </p>
-                              </div>
-                          </div>
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h5 class="fw-bold">DGCA</h5>
+                        <p class="text-muted mb-2 fw-bold"> </p>
+                        <p class="text-muted">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                          necessitatibus adipisci, ad alias, voluptate pariatur officia
+                          repellendus repellat inventore fugit perferendis totam dolor
+                          voluptas et corrupti distinctio maxime corporis optio?
+                        </p>
                       </div>
-                      
-                    
+                    </div>
                   </div>
+
+
+                </div>
               </div>
-            
+
               <!-- Single Timeline Content-->
               <div class="single-timeline-area">
-                  <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                   
-                  </div>
-                  <div class="row">
-                      <div class="col-12 col-md-10 col-lg-8">
-                          <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                            <div class="col-12 col-md-10 col-lg-12">
-                              <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                  
-                                  <div class="timeline-text">
-                                      <h6>AIR NAVIGATION</h6>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                  </div>
-                              </div>
-                              <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                  
-                                <div class="timeline-text">
-                                    <h6>METEROLOGY</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                  
-                              <div class="timeline-text">
-                                  <h6>AIR REGULATIONS</h6>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                              </div>
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
 
-                          </div>
-                          <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                  
-                            <div class="timeline-text">
-                                <h6>TECHNICAL GENERAL</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                  
-                          <div class="timeline-text">
-                              <h6>RTR-A</h6>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                          </div>
-                      </div>
-                          </div>
-                          
-                          </div>
-                      </div>
-                    
-                      <div class="col-12 col-md-6 col-lg-4">
-                         
-                      </div>
-                  </div>
-              </div>
-             
-          </div>
-          </div>
-        </li>
-
-        <li class="cd-h-timeline__event text-component">
-          <div class="col-12 col-lg-12">
-            <div class="apland-timeline-area">
-              <!-- Single Timeline Content-->
-            
-              <!-- Single Timeline Content-->
-           
-              <!-- Single Timeline Content-->
-              <div class="single-timeline-area">
-                  <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                   
-                  </div>
-                  <div class="row">
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-8">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                       <div class="col-12 col-md-10 col-lg-12">
-                          <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                             
-                            <div class="hori-timeline" dir="ltr">
-  
-                              <ul class="list-inline events">
-                                  <li class="list-inline-item event-list">
-                                      <div class="px-4">
-                                          
-                                          <h5 class="font-size-16" > Within Running Period</h5>
-                                          <p class="text-muted"style="margin-top: 20px;" >It will be as simple as occidental in fact it will be Occidental Cambridge friend</p>
-                                          <div>
-                                              <a href="#"  style="width: 150px;">.</a>
-                                          </div>
-                                      </div>
-                                  </li>
-                                  <li class="list-inline-item event-list">
-                                      <div class="px-4">
-                                          <h5 class="font-size-16">Post Running Period</h5>
-                                          <p class="text-muted" style="margin-top: 20px;">Everyone realizes why a new common language one could refuse translators.</p>
-                                          <div>
-                                              <a href="#"  style="width: 150px;">.</a>
-                                          </div>
-                                      </div>
-                                  </li>
-                                
-                                  
-                              </ul>
+                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                          style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                          <div class="timeline-text">
+                            <h6>AIR NAVIGATION</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                           </div>
+                        </div>
+                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                          style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                          <div class="timeline-text">
+                            <h6>METEROLOGY</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                           </div>
+                        </div>
+                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                          style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                          <div class="timeline-text">
+                            <h6>AIR REGULATIONS</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                          </div>
+
+                        </div>
+                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                          style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                          <div class="timeline-text">
+                            <h6>TECHNICAL GENERAL</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                          </div>
+                        </div>
+                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                          style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                          <div class="timeline-text">
+                            <h6>RTR-A</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                          </div>
+                        </div>
                       </div>
-                    
-                      <div class="col-12 col-md-6 col-lg-4">
-                         
-                      </div>
+
+                    </div>
                   </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
               </div>
-             
+
+            </div>
           </div>
+        </li>
+
+        <li class="cd-h-timeline__event text-component">
+          <div class="col-12 col-lg-12">
+            <div class="apland-timeline-area">
+              <!-- Single Timeline Content-->
+
+              <!-- Single Timeline Content-->
+
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-12">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="hori-timeline" dir="ltr">
+
+                        <ul class="list-inline events">
+                          <li class="list-inline-item event-list">
+                            <div class="px-4">
+
+                              <h5 class="font-size-16"> Within Running Period</h5>
+                              <p class="text-muted" style="margin-top: 20px;">It will be as simple as occidental in fact
+                                it will be Occidental Cambridge friend</p>
+                              <div>
+                                <a href="#" style="width: 150px;">.</a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="list-inline-item event-list">
+                            <div class="px-4">
+                              <h5 class="font-size-16">Post Running Period</h5>
+                              <p class="text-muted" style="margin-top: 20px;">Everyone realizes why a new common
+                                language one could refuse translators.</p>
+                              <div>
+                                <a href="#" style="width: 150px;">.</a>
+                              </div>
+                            </div>
+                          </li>
+
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </li>
 
@@ -670,152 +803,157 @@
           <div class="col-12 col-lg-6">
             <!-- Timeline Area-->
             <div class="apland-timeline-area">
-                <!-- Single Timeline Content-->
-                <div class="single-timeline-area">
-                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                        <p>State 1</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-10 col-lg-12">
-                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                
-                                <div class="timeline-text">
-                                    <h6>UNITED STATE OF AMERICA</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                      
-                    </div>
-                </div>
-                <!-- Single Timeline Content-->
-                <div class="single-timeline-area">
-                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                        <p>State 2</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-10 col-lg-12">
-                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                
-                                <div class="timeline-text">
-                                    <h6>CANADA</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4">
-                            
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Timeline Content-->
-                <div class="single-timeline-area">
-                    <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                        <p>STATE 3</p>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-10 col-lg-12">
-                            <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                               
-                                <div class="timeline-text">
-                                    <h6>NEW ZEALAND</h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                </div>
-                            </div>
-                        </div>
-                      
-                        <div class="col-12 col-md-6 col-lg-4">
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="single-timeline-area">
-                  <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                      <p>SATE 4</p>
-                  </div>
-                  <div class="row">
-                      <div class="col-12 col-md-10 col-lg-12">
-                          <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                             
-                              <div class="timeline-text">
-                                  <h6>SOUTH AFRICA</h6>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                              </div>
-                          </div>
-                      </div>
-                    
-                      <div class="col-12 col-md-6 col-lg-4">
-                         
-                      </div>
-                  </div>
-              </div>
+              <!-- Single Timeline Content-->
               <div class="single-timeline-area">
-                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                    <p>STATE 5</p>
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>State 1</p>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-10 col-lg-12">
-                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                           
-                            <div class="timeline-text">
-                                <h6>TUNISIA</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
+                  <div class="col-12 col-md-10 col-lg-12">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>UNITED STATE OF AMERICA</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
                     </div>
-                  
-                    <div class="col-12 col-md-6 col-lg-4">
-                       
-                    </div>
+                  </div>
+
+
                 </div>
+              </div>
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>State 2</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-12">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>CANADA</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <!-- Single Timeline Content-->
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>STATE 3</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-12">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>NEW ZEALAND</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>SATE 4</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-12">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>SOUTH AFRICA</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
+              <div class="single-timeline-area">
+                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                  style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p>STATE 5</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-12">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+
+                      <div class="timeline-text">
+                        <h6>TUNISIA</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-4">
+
+                  </div>
+                </div>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         </li>
 
         <li class="cd-h-timeline__event text-component">
           <div class="cd-h-timeline__event-content container">
             <h2 class="cd-h-timeline__event-title">Event title here</h2>
             <em class="cd-h-timeline__event-date">August 30th, 2014</em>
-            <p class="cd-h-timeline__event-description color-contrast-medium"> 
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+            <p class="cd-h-timeline__event-description color-contrast-medium">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae
+              ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur
+              quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet
+              quibusdam quisquam, quae, temporibus dolores porro doloribus.
             </p>
           </div>
         </li>
 
-        
-        
+
+
       </ol>
     </div> <!-- .cd-h-timeline__events -->
   </section>
   <!-- end time line -->
 
-    <!-- Courses Start -->
-    <div class="container-xxl my-4 my-xl-6 py-6 pb-0" style="background-color:#f0f2f4c3;>
-      <div class="container">
-        <div
-          class="text-center mx-auto mb-5 wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="max-width: 600px;"
-        >
-          <h6 class="text-primary text-uppercase mb-2" >Trending Courses</h6>
-          <h1 class="display-6 mb-4"  ">
+  <!-- Courses Start -->
+  <div class="container-xxl my-4 my-xl-6 py-6 pb-0" style="background-color:#f0f2f4c3;">
+    <div class=" container">
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+        <h6 class="text-primary text-uppercase mb-2">Trending Courses</h6>
+        <h1 class="display-6 mb-4" ">
             Embark on a transformative journey with our training program
           </h1>
         </div>
-        <div class="row g-4 justify-content-start" >
-          <div
-            class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <div
-              class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100"
-            >
+        <div class=" row g-4 justify-content-start">
+          <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
               <div class="text-center p-4">
                 <h5 class="mb-3 mt-2 mt-xl-1">A320 Pre Type Rating Class</h5>
                 <p>
-                  Our program fully prepares aspiring pilots for A320 certification, providing essential knowledge and skills for success.  
+                  Our program fully prepares aspiring pilots for A320 certification, providing essential knowledge and
+                  skills for success.
                 </p>
                 <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item small">
@@ -827,28 +965,16 @@
                 </ol>
               </div>
               <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-                <img
-                  class="img-fluid border-r10"
-                  src="./img/cource1.png"
-                  alt=""
-                />
+                <img class="img-fluid border-r10" src="./img/cource1.png" alt="" />
                 <div class="courses-overlay">
-                  <a
-                    class="btn btn-outline-primary border-2 courses-btn-bg"
-                    href="./inidvidual-clases/pretyping.html"
-                    >Read More</a
-                  >
+                  <a class="btn btn-outline-primary border-2 courses-btn-bg"
+                    href="./inidvidual-clases/pretyping.html">Read More</a>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp"
-            data-wow-delay="0.3s"
-          >
-            <div
-              class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100"
-            >
+          <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
               <div class="text-center p-4">
                 <h5 class="mb-3 mt-2 mt-xl-1">
                   DGCA cpl classes</h5>
@@ -865,35 +991,22 @@
                 </ol>
               </div>
               <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-                <img
-                  class="img-fluid border-r10"
-                  src="./img/DgcaCpl3.png"
-                  alt=""
-                />
+                <img class="img-fluid border-r10" src="./img/DgcaCpl3.png" alt="" />
                 <div class="courses-overlay">
-                  <a
-                    class="btn btn-outline-primary border-2 courses-btn-bg"
-                    href="./course-details.html"
-                    >Read More</a
-                  >
+                  <a class="btn btn-outline-primary border-2 courses-btn-bg" href="./course-details.html">Read More</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div
-            class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div
-              class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100"
-            >
+          <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
               <div class="text-center p-4">
                 <h5 class="mb-3 mt-2 mt-xl-1">
                   Radio Telephony (rtr) Class</h5>
-                  <p>
-                    This training is crucial for effective interaction between aircraft and air traffic control. 
-                  </p>
+                <p>
+                  This training is crucial for effective interaction between aircraft and air traffic control.
+                </p>
                 <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item small">
                     <i class="fa fa-signal text-primary me-2"></i>Beginner
@@ -904,34 +1017,23 @@
                 </ol>
               </div>
               <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-                <img
-                  class="img-fluid border-r10"
-                  src="./img/rtrclasses.png"
-                  alt=""
-                />
+                <img class="img-fluid border-r10" src="./img/rtrclasses.png" alt="" />
                 <div class="courses-overlay">
-                  <a
-                    class="btn btn-outline-primary border-2 courses-btn-bg"
-                    href="./inidvidual-clases/RTR.html"
-                    >Read More</a
-                  >
+                  <a class="btn btn-outline-primary border-2 courses-btn-bg" href="./inidvidual-clases/RTR.html">Read
+                    More</a>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp"
-            data-wow-delay="0.5s"
-          >
-            <div
-              class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100"
-            >
+          <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
               <div class="text-center p-4">
                 <h5 class="mb-3 mt-2 mt-xl-1">NIOS Prep
                   Class</h5>
-                  <p>
-                    NIOS is known for its flexibility, allowing students to pursue education at their own pace and convenience
-                  </p>
+                <p>
+                  NIOS is known for its flexibility, allowing students to pursue education at their own pace and
+                  convenience
+                </p>
                 <ol class="breadcrumb justify-content-center mb-0">
                   <li class="breadcrumb-item small">
                     <i class="fa fa-signal text-primary me-2"></i>Beginner
@@ -942,24 +1044,17 @@
                 </ol>
               </div>
               <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-                <img
-                  class="img-fluid border-r10"
-                  src="./img/nios-prepclasses.png"
-                  alt=""
-                />
+                <img class="img-fluid border-r10" src="./img/nios-prepclasses.png" alt="" />
                 <div class="courses-overlay">
-                  <a
-                    class="btn btn-outline-primary border-2 courses-btn-bg"
-                    href="./inidvidual-clases/niosclasses.html"
-                    >Read More</a
-                  >
+                  <a class="btn btn-outline-primary border-2 courses-btn-bg"
+                    href="./inidvidual-clases/niosclasses.html">Read More</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
+  </div>
 
 
 
@@ -1050,9 +1145,8 @@
         </div>
         <div class="demo-class-imgarea d-flex justify-content-center py-4 pt-0 py-xl-0">
           <div class="d-flex justify-content-center justify-content-xl-start demo-class-imgWrapper">
-            <img loading="lazy" decoding="async" width="799" height="449"
-              src="./img/thumbnail.png" class="demo-class-videoImg" alt=""
-              srcset="
+            <img loading="lazy" decoding="async" width="799" height="449" src="./img/thumbnail.png"
+              class="demo-class-videoImg" alt="" srcset="
               ./img/thumbnail.png        799w,
               ./img/thumbnail.png 300w,
               ./img/thumbnail.png 768w
@@ -1355,11 +1449,12 @@
   <!-- Footer End -->
 
   <!-- Copyright Start -->
- 
+
   <!-- Copyright End -->
 
   <!-- Back to Top -->
-  <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #49aaaa;"><i class="bi bi-whatsapp"></i></a>
+  <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #49aaaa;"><i
+      class="bi bi-whatsapp"></i></a>
 
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -1381,6 +1476,7 @@
   <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
   <script src="assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/follower.js"></script>
 </body>
 
 </html>
