@@ -23,20 +23,22 @@
   <!-- Libraries Stylesheet -->
   <link href="../lib/animate/animate.min.css" rel="stylesheet" />
   <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="../css/hero.css" />
   <!-- Customized Bootstrap Stylesheet -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="../css2/style.css">
   <!-- Template Stylesheet -->
   <link href="../css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css2/style.css">
   <link rel="stylesheet" href="../css/course-details.css" />
+  <link rel="stylesheet" href="../check.css">
 </head>
 
 <body>
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-      <img src="./img/adynamicsLogo.png" width="180px" height="auto" alt="" />
+      <img src="/adynamics3/img/adynamicsLogo.png" width="180px" height="auto" alt="" />
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -47,98 +49,81 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="jj.html" class="nav-item nav-link active">Home</a>
-            <a href="testComponents/about-hero.html" class="nav-item nav-link ">About</a>
-            <a href="testComponents/cource-aboutpage.html" class="nav-item nav-link">Flying</a>
+            <a href="/adynamics3/jj.html" class="nav-item nav-link active">Home</a>
+            <a href="/adynamics3/testComponents/about-hero.html" class="nav-item nav-link ">About</a>
+            <a href="/adynamics3/testComponents/cource-aboutpage.html" class="nav-item nav-link">Flying</a>
             <div class="dropdown">
-              <a href="testComponents/clasess.html" class="nav-item nav-link nav-dropdown ">Classes</a>
+              <a href="/adynamics3/testComponents/clasess.html" class="nav-item nav-link nav-dropdown ">Classes</a>
               <div class="dropdown-menu">
-                <a href="inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
-                <a href="course-details.html">DGca CPL Classes</a>
-                <a href="inidvidual-clases/RTR.html">Radio Telephony (rtr) Class</a>
-                <a href="inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
+                <a href="/adynamics3/inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
+                <a href="/adynamics3/course-details.html">DGca CPL Classes</a>
+                <a href="/adynamics3/inidvidual-clases/RTR.html">Radio Telephony (rtr) Class</a>
+                <a href="/adynamics3/inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
               </div>
             </div>
-            <a href="blog/homepageblog.html" class="nav-item nav-link">blog</a>
+            <a href="/adynamics3/blog/homepageblog.html" class="nav-item nav-link">blog</a>
           </div>
           <!-- <a style="background-color: #49aaaa;height: auto; font-size: 1em;" href=""
             class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">ENQUIRY<i class="fa fa-arrow-right ms-3"></i></a> -->
-          <button class="enquiry-button-nav">
-            <img src="../assets/img/enquiry.png" alt="">
+          <button class="enquiry-button-nav" onclick="redirectEnquiry()">
+            <img src="/adynamics3/assets/img/enquiry.png" alt="">
             <h2>ENQUIRY</h2>
           </button>
-
         </div>
   </nav>
   <!-- Navbar End -->
 
   <!-- Detail Start -->
-  <div class="container-fluid py-5 pb-0">
-    <div class="container py-3">
+  <section class="hero py-2 py-xl-5 py-6 imSection-bg" style="margin-top:-50px">
+    <div class="container-xxl grid py-3 mt-xl-1">
       <div class="row">
-        <div class="col-lg-8">
-          <div class="mb-5">
-            <div class="section-title position-relative mb-1">
-              <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">
-                Course Detail
-              </h6>
-              <h1 class="display-4">
+        <div class="hero-text-section col-lg-6 order-lg-1 order-2 py-3 py-sm-5">
+          <div class="hero-text-wrapper text-lg-start text-center px-0 px-sm-4">
+            <strong>
+              <p class="text-xl">WELCOME TO ADYNAMICS</p>
+            </strong>
+            <h1 class="pt- display-6">
+              Mumbai NO.1 Rated Online Flying Aviation Training Center
+            </h1>
 
-                SACAA CPL </h1>
-            </div>
-            <p class="mt-4">
-              Dream of soaring high? Embark on your pilot journey with SACAA CPL Training in South Africa!
-              Experience world-class education, hands-on training, and breathtaking African skies. Your
-              wings await!
-            </p>
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary"
+                style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
+                More</a>
 
-            <div class="py-4 px-2 d-flex justify-content-center justify-content-xl-start">
-              <a class="btn btn-block hero-btn-course-details border-r10 py-3 px-5" href="">Enroll Now</a>
+              <button class="flex-btn">
+                <div class="btn-icon" style="background-color: #49aaaa;">
+                  <ion-icon name="play" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span" style="color: #49aaaa;">Demo Class</span>
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 mt-xl- mt-lg-0">
-          <div class="mb-5 py-3 border-r10 course-feature-wrapper">
-            <h4 class="text-dark py-3 px-4 m-0 text-center">
-              Course Features
-            </h4>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Instructor</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                John Doe
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Rating</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                4.5 <small>(250)</small>
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Lectures</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                15 sections
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Duration</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                10.00 Hrs
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4 pb-3">
-              <h6 class="my-3 course-feature-head">Skill level</h6>
-
-              <h6 class="text-secondary my-3 course-feature-value">
-                All Level
-              </h6>
-            </div>
-          </div>
+        <div class="hero-video-section col-lg-6 order-lg-2 py-5">
+          <img fetchpriority="high" decoding="async" width="900" height="506"
+            class="img-fluid mw-sm-100 w-md-80 w-lg-80" src="../img/thumbnail.png" srcset="
+            ../img/thumbnail.png        900w,
+            ../img/thumbnail.png 300w,
+            ../img/thumbnail.png 768w
+            " sizes="(max-width: 900px) 100vw, 900px" />
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+              <g id="Group_205" data-name="Group 205" transform="translate(-1462 -4918)">
+                <circle id="Ellipse_12" data-name="Ellipse 12" cx="25" cy="25" r="25" transform="translate(1462 4918)"
+                  fill="#fff"></circle>
+                <path id="play-svgrepo-com"
+                  d="M8.286,3.407A1.5,1.5,0,0,0,6,4.684V19.316a1.5,1.5,0,0,0,2.286,1.277l11.888-7.316a1.5,1.5,0,0,0,0-2.555Z"
+                  transform="translate(1475.556 4931)" fill="#49aaaa"></path>
+              </g>
+            </svg>
+          </a>
+          <div class="video-background-lg d-none d-xxl-block"></div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- Detail End -->
 
   <!-- topics section  -->
