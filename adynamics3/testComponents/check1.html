@@ -5,43 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <!-- 
     - custom css link
   
 <!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-  rel="stylesheet"
-/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<!-- Icon Font Stylesheet -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-  rel="stylesheet"
-/>
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-  rel="stylesheet"
-/>
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-<!-- Libraries Stylesheet -->
-<link href="../lib/animate/animate.min.css" rel="stylesheet" />
-<link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-<!-- Customized Bootstrap Stylesheet -->
-<link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
 
-<!-- Template Stylesheet -->
-<link href="../css/style.css" rel="stylesheet" />
+  <!-- Template Stylesheet -->
+  <link href="../css/style.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="../css/hero.css" />
+  <link rel="stylesheet" href="../css/hero.css" />
 
-<link href="../css/style.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css2/style.css">
   <link rel="stylesheet" href="../check.css">
   <!-- 
@@ -52,110 +43,107 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
-<style>
-  @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+  <style>
+    @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
 
-.kk h1 {
-  text-align: center;
-}
-.kk ul {
-  --col-gap: 2rem;
-  --barH: 1rem;
-  --roleH: 2rem;
-  --flapH: 2rem;
+    .kk h1 {
+      text-align: center;
+    }
 
-  width: min(60rem, 90%);
-  margin-inline: auto;
+    .kk ul {
+      --col-gap: 2rem;
+      --barH: 1rem;
+      --roleH: 2rem;
+      --flapH: 2rem;
 
-  display: flex;
-  flex-wrap: wrap;
+      width: min(60rem, 90%);
+      margin-inline: auto;
 
-  gap: var(--col-gap);
-  padding-inline: calc(var(--col-gap) / 2);
+      display: flex;
+      flex-wrap: wrap;
 
-  justify-content: center;
-  align-items: flex-start;
-  list-style: none;
-}
-.kk ul li {
-  width: 10em;
-  display: grid;
-  grid-template:
-    "role"
-    "icon"
-    "title"
-    "descr";
-  align-items: flex-start;
-  gap: 1rem;
-  padding-block-end: calc(var(--flapH) + 1rem);
-  text-align: center;
-  background: var(--accent-color);
-  background-color:#49aaaa; 
-  clip-path: polygon(
-    calc(var(--col-gap) / -2 - 5px) 0,
-    calc(100% + var(--col-gap) / 2 + 5px) 0,
-    calc(100% + var(--col-gap) / 2 + 5px ) calc(100% - var(--flapH)),
-    50% 100%,
-    calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH))
-  );
-}
+      gap: var(--col-gap);
+      padding-inline: calc(var(--col-gap) / 2);
 
-/* bar */
-.kk ul li::before {
-  content: "";
-  grid-area: role;
-  height: var(--barH);
-  width: calc(100% + var(--col-gap));
-  margin-left: calc(var(--col-gap) / -2);
-  margin-top: calc(var(--roleH) / 2 - var(--barH) / 2);
-  background: grey;
-  z-index: -1;
-  background-image: #49aaa
-}
+      justify-content: center;
+      align-items: flex-start;
+      list-style: none;
+    }
 
-/* role */
-.kk ul li::after {
-  content: "";
-  grid-area: role;
-  background: var(--accent-color);
-  background-image: #49aaaa
-  height: var(--roleH);
-}
+    .kk ul li {
+      width: 10em;
+      display: grid;
+      grid-template:
+        "role"
+        "icon"
+        "title"
+        "descr";
+      align-items: flex-start;
+      gap: 1rem;
+      padding-block-end: calc(var(--flapH) + 1rem);
+      text-align: center;
+      background: var(--accent-color);
+      background-color: #49aaaa;
+      clip-path: polygon(calc(var(--col-gap) / -2 - 5px) 0,
+          calc(100% + var(--col-gap) / 2 + 5px) 0,
+          calc(100% + var(--col-gap) / 2 + 5px) calc(100% - var(--flapH)),
+          50% 100%,
+          calc(var(--col-gap) / -2 - 5px) calc(100% - var(--flapH)));
+    }
 
-.kk ul li .icon,
-.kk ul li .title,
-.kk ul li .descr {
-  padding-inline: 1rem;
-  color: white;
-  
-}
+    /* bar */
+    .kk ul li::before {
+      content: "";
+      grid-area: role;
+      height: var(--barH);
+      width: calc(100% + var(--col-gap));
+      margin-left: calc(var(--col-gap) / -2);
+      margin-top: calc(var(--roleH) / 2 - var(--barH) / 2);
+      background: grey;
+      z-index: -1;
+      background-image: #49aaaa;
+    }
 
-.kk ul li .icon {
-  font-size: 3rem;
-}
-.kk ul li .title {
-  font-size: 1.25rem;
-  font-weight: 700;
-}
+    /* role */
+    .kk ul li::after {
+      content: "";
+      grid-area: role;
+      background: var(--accent-color);
+      background-image: #49aaaa;
+      height: var(--roleH);
+    }
 
-.kk ul li .descr {
-  font-size: 0.9rem;
-}
+    .kk ul li .icon,
+    .kk ul li .title,
+    .kk ul li .descr {
+      padding-inline: 1rem;
+      color: white;
 
-.credits {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-}
-.credits a {
-  color: var(--color);
-}
+    }
 
+    .kk ul li .icon {
+      font-size: 3rem;
+    }
 
+    .kk ul li .title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
 
+    .kk ul li .descr {
+      font-size: 0.9rem;
+    }
 
+    .credits {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+    }
 
-</style>
+    .credits a {
+      color: var(--color);
+    }
+  </style>
 </head>
 
 <body id="top">
@@ -163,7 +151,7 @@
   <!-- 
     - #HEADER
   -->
- 
+
   <!-- Spinner End -->
   <!-- Topbar Start -->
   <div class="container-fluid bg-dark text-light p-0">
@@ -197,11 +185,11 @@
   </div>
   <!-- Topbar End -->
 
- 
+
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-      <img src="./img/adynamicsLogo.png" width="180px" height="auto" alt="" />
+      <img src="/adynamics3/img/adynamicsLogo.png" width="180px" height="auto" alt="" />
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -212,92 +200,73 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="jj.html" class="nav-item nav-link active">Home</a>
-            <a href="testComponents/about-hero.html" class="nav-item nav-link ">About</a>
-            <a href="testComponents/cource-aboutpage.html" class="nav-item nav-link">Flying</a>
-            <a href="testComponents/clasess.html" class="nav-item nav-link  ">Classes</a>
-            <a href="blog/homepageblog.html" class="nav-item nav-link">blog</a>
+            <a href="/adynamics3/jj.html" class="nav-item nav-link active">Home</a>
+            <a href="/adynamics3/testComponents/about-hero.html" class="nav-item nav-link ">About</a>
+            <a href="/adynamics3/testComponents/cource-aboutpage.html" class="nav-item nav-link">Flying</a>
+            <div class="dropdown">
+              <a href="/adynamics3/testComponents/clasess.html" class="nav-item nav-link nav-dropdown ">Classes</a>
+              <div class="dropdown-menu">
+                <a href="/adynamics3/inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
+                <a href="/adynamics3/course-details.html">DGca CPL Classes</a>
+                <a href="/adynamics3/inidvidual-clases/RTR.html">Radio Telephony (rtr) Class</a>
+                <a href="/adynamics3/inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
+              </div>
+            </div>
+            <a href="/adynamics3/blog/homepageblog.html" class="nav-item nav-link">blog</a>
           </div>
-          <a style="background-color: #49aaaa;height: auto;padding: 0px;font-size: 1em;" href=""
-            class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">ENQUIRY<i  style="margin-left: 20px; background: url("./img/7329824.jpg"); "></i></a>
+          <!-- <a style="background-color: #49aaaa;height: auto; font-size: 1em;" href=""
+            class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">ENQUIRY<i class="fa fa-arrow-right ms-3"></i></a> -->
+          <button class="enquiry-button-nav" onclick="redirectEnquiry()">
+            <img src="/adynamics3/assets/img/enquiry.png" alt="">
+            <h2>ENQUIRY</h2>
+          </button>
         </div>
   </nav>
 
 
 
-
   <section class="hero py-2 py-xl-5 py-6 imSection-bg" style="margin-top:-50px">
-    <div class="container-xxl grid py-3 mt-xl-1" >
+    <div class="container-xxl grid py-3 mt-xl-1">
       <div class="row">
-        <div
-          class="hero-text-section col-lg-6 order-lg-1 order-2 py-3 py-sm-5"
-        >
-          <div
-            class="hero-text-wrapper text-lg-start text-center px-0 px-sm-4"
-          >
+        <div class="hero-text-section col-lg-6 order-lg-1 order-2 py-3 py-sm-5">
+          <div class="hero-text-wrapper text-lg-start text-center px-0 px-sm-4">
             <strong>
               <p class="text-xl">WELCOME TO ADYNAMICS</p>
             </strong>
             <h1 class="pt- display-6">
               Mumbai NO.1 Rated Online Flying Aviation Training Center
             </h1>
-           
-        <div class="btn-group">
-          <a href="#" class="btn btn-primary" style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
-            More</a>
 
-          <button class="flex-btn">
-            <div class="btn-icon" style="background-color: #49aaaa;">
-              <ion-icon name="play" aria-hidden="true"></ion-icon>
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary"
+                style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
+                More</a>
+
+              <button class="flex-btn">
+                <div class="btn-icon" style="background-color: #49aaaa;">
+                  <ion-icon name="play" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span" style="color: #49aaaa;">Demo Class</span>
+              </button>
             </div>
-
-            <span class="span" style="color: #49aaaa;">Demo Class</span>
-          </button>
-        </div>
           </div>
         </div>
         <div class="hero-video-section col-lg-6 order-lg-2 py-5">
-          <img
-            fetchpriority="high"
-            decoding="async"
-            width="900"
-            height="506"
-            class="img-fluid mw-sm-100 w-md-80 w-lg-80"
-            src="../img/thumbnail.png"
-            srcset="
+          <img fetchpriority="high" decoding="async" width="900" height="506"
+            class="img-fluid mw-sm-100 w-md-80 w-lg-80" src="../img/thumbnail.png" srcset="
             ../img/thumbnail.png        900w,
             ../img/thumbnail.png 300w,
             ../img/thumbnail.png 768w
-            "
-            sizes="(max-width: 900px) 100vw, 900px"
-          />
+            " sizes="(max-width: 900px) 100vw, 900px" />
           <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-            >
-              <g
-                id="Group_205"
-                data-name="Group 205"
-                transform="translate(-1462 -4918)"
-              >
-                <circle
-                  id="Ellipse_12"
-                  data-name="Ellipse 12"
-                  cx="25"
-                  cy="25"
-                  r="25"
-                  transform="translate(1462 4918)"
-                  fill="#fff"
-                ></circle>
-                <path
-                  id="play-svgrepo-com"
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+              <g id="Group_205" data-name="Group 205" transform="translate(-1462 -4918)">
+                <circle id="Ellipse_12" data-name="Ellipse 12" cx="25" cy="25" r="25" transform="translate(1462 4918)"
+                  fill="#fff"></circle>
+                <path id="play-svgrepo-com"
                   d="M8.286,3.407A1.5,1.5,0,0,0,6,4.684V19.316a1.5,1.5,0,0,0,2.286,1.277l11.888-7.316a1.5,1.5,0,0,0,0-2.555Z"
-                  transform="translate(1475.556 4931)"
-                  fill="#49aaaa"
-                ></path>
+                  transform="translate(1475.556 4931)" fill="#49aaaa"></path>
               </g>
             </svg>
           </a>
@@ -306,26 +275,26 @@
       </div>
     </div>
   </section>
-   
-   <section >
+
+  <section>
     <div class="section_heading text-center">
-      
+
       <h1 class="display-6 mb-4" ">
                   Aviator RoadMap & Global Flight Training Hubs
                 </h1>
                 <div class=" line">
     </div>
-  </div>
+    </div>
     <div class="container-xxl py-6 px-lg-5">
       <div class="col-12 col-lg-6">
         <!-- Timeline Area-->
-       <div class="section_heading text-center">
-        <h6 class="text-primary text-uppercase mb-2">Trending Courses</h6>
-       </div>
-        <div class="apland-timeline-area"  >
+        <div class="section_heading text-center">
+          <h6 class="text-primary text-uppercase mb-2">Trending Courses</h6>
+        </div>
+        <div class="apland-timeline-area">
           <!-- Single Timeline Content-->
           <div class="single-timeline-area">
-           
+
             <div class="row">
               <div class="col-12 col-md-10 col-lg-12" style="margin-left: -30px;">
                 <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
@@ -343,7 +312,7 @@
           </div>
           <!-- Single Timeline Content-->
           <div class="single-timeline-area">
-            
+
             <div class="row">
               <div class="col-12 col-md-10 col-lg-12" style="margin-left: -30px;">
                 <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
@@ -362,9 +331,9 @@
           </div>
           <!-- Single Timeline Content-->
           <div class="single-timeline-area">
-            
+
             <div class="row">
-              <div class="col-12 col-md-10 col-lg-12"style="margin-left: -30px;">
+              <div class="col-12 col-md-10 col-lg-12" style="margin-left: -30px;">
                 <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
                   style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
 
@@ -381,9 +350,9 @@
             </div>
           </div>
           <div class="single-timeline-area">
-            
+
             <div class="row">
-              <div class="col-12 col-md-10 col-lg-12"style="margin-left: -30px;">
+              <div class="col-12 col-md-10 col-lg-12" style="margin-left: -30px;">
                 <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
                   style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
 
@@ -400,9 +369,9 @@
             </div>
           </div>
           <div class="single-timeline-area">
-           
+
             <div class="row">
-              <div class="col-12 col-md-10 col-lg-12"style="margin-left: -30px;">
+              <div class="col-12 col-md-10 col-lg-12" style="margin-left: -30px;">
                 <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
                   style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
 
@@ -630,7 +599,8 @@
   <!-- Template Javascript -->
   <script src="../js/main.js"></script>
   <script src="../assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-  <script src="../assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  <script src="../assets/js/swipe-content.js"></script>
+  <!-- A Vanilla JavaScript plugin to detect touch interactions -->
   <script src="../assets/js/main.js"></script>
 
 </body>

@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form container styles */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.container .row .form-tagline{
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #49aaaa, #ffffff00);
+    height: 100%;
+    padding: 20px;
+    padding-top: 2rem;
+}
+
+/* Form header styles */
+#form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#title {
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+/* Form tagline styles */
+#form-tagline {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-tagline {
+  margin-top: 20px;
+}
+
+/* Form content styles */
+#form-content {
+  padding: 20px;
+  /* background-color: #f4f4f4; */
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Form input styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+label{
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+/* Submit button styles */
+.submit-button {
+  text-align: center;
+}
+
+#submit {
+  background-color: #49aaaa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #2b7070;
+}
