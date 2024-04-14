@@ -563,4 +563,32 @@ nav {
   height: 40rem;
 }
 
+@media screen and (max-width: 768px){
+  .testimonial .personal video{
+    height: 20rem;
+  }
+  
+  .hero-banner{
+    width: 20rem;
+  }
+
+  .hero{
+    width: 100%;
+
+    .hero-title{
+      font-size: 1rem;
+    
+    }
+  }
+
+  .hero .hero-content{
+    width: 25rem;
+  }
+
+  body{
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
+
 
