@@ -34,36 +34,12 @@
   <link rel="stylesheet" href="scss/follower.scss">
   <link rel="stylesheet" href="check.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>   
-.hori-timeline .events {
-    border-top: 3px solid #e9ecef;
-}
-.hori-timeline .events .event-list {
-    display: block;
-    position: relative;
-    text-align: center;
-    padding-top: 70px;
-    margin-right: 0;
-}
-.hori-timeline .events .event-list:before {
-    content: "";
-    position: absolute;
-    height: 36px;
-    border-right: 2px dashed #dee2e6;
-    top: 0;
-}
-.hori-timeline .events .event-list .event-date {
-    position: absolute;
-    top: 38px;
-    left: 0;
-    right: 0;
-    width: 75px;
-    margin: 0 auto;
-    border-radius: 4px;
-    padding: 2px 4px;
-}
-@media (min-width: 1140px) {
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .hori-timeline .events {
+      border-top: 3px solid #e9ecef;
+    }
+
     .hori-timeline .events .event-list {
       display: block;
       position: relative;
@@ -93,39 +69,67 @@
 
     @media (min-width: 1140px) {
       .hori-timeline .events .event-list {
-        display: inline-block;
-        width: 40%;
-        padding-top: 45px;
+        display: block;
+        position: relative;
+        text-align: center;
+        padding-top: 70px;
+        margin-right: 0;
+      }
+
+      .hori-timeline .events .event-list:before {
+        content: "";
+        position: absolute;
+        height: 36px;
+        border-right: 2px dashed #dee2e6;
+        top: 0;
       }
 
       .hori-timeline .events .event-list .event-date {
-        top: -12px;
+        position: absolute;
+        top: 38px;
+        left: 0;
+        right: 0;
+        width: 75px;
+        margin: 0 auto;
+        border-radius: 4px;
+        padding: 2px 4px;
+      }
+
+      @media (min-width: 1140px) {
+        .hori-timeline .events .event-list {
+          display: inline-block;
+          width: 40%;
+          padding-top: 45px;
+        }
+
+        .hori-timeline .events .event-list .event-date {
+          top: -12px;
+        }
+      }
+
+      .bg-soft-primary {
+        background-color: rgba(64, 144, 203, .3) !important;
+      }
+
+      .bg-soft-success {
+        background-color: rgba(71, 189, 154, .3) !important;
+      }
+
+      .bg-soft-danger {
+        background-color: rgba(231, 76, 94, .3) !important;
+      }
+
+      .bg-soft-warning {
+        background-color: rgba(249, 213, 112, .3) !important;
+      }
+
+      .card {
+        border: none;
+        margin-bottom: 24px;
+        -webkit-box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
+        box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
       }
     }
-
-    .bg-soft-primary {
-      background-color: rgba(64, 144, 203, .3) !important;
-    }
-
-    .bg-soft-success {
-      background-color: rgba(71, 189, 154, .3) !important;
-    }
-
-    .bg-soft-danger {
-      background-color: rgba(231, 76, 94, .3) !important;
-    }
-
-    .bg-soft-warning {
-      background-color: rgba(249, 213, 112, .3) !important;
-    }
-
-    .card {
-      border: none;
-      margin-bottom: 24px;
-      -webkit-box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
-      box-shadow: 0 0 13px 0 rgba(236, 236, 241, .44);
-    }
-}
   </style>
 </head>
 
@@ -134,6 +138,14 @@
   <div id="spinner"
     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
     <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+
+  <div class="demo-class">
+    <iframe src="https://www.youtube.com/embed/xy8aJw1vYHo?si=blalHI8GgNen-Csp&enablejsapi=1" id="player"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <button class="close-demo-class" onclick="closeDemoClass()"><i class="fa fa-times"></i></button>
   </div>
   <!-- Spinner End -->
   <!-- Topbar Start -->
@@ -232,7 +244,7 @@
           <a href="#" class="btn btn-primary" style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
             More</a>
 
-          <button class="flex-btn">
+          <button class="flex-btn" onclick="playDemoClass()">
             <div class="btn-icon" style="background-color: #49aaaa;">
               <ion-icon name="play" aria-hidden="true"></ion-icon>
             </div>
@@ -373,7 +385,8 @@
 
                       <div class="timeline-text">
                         <h6> Meet the Eligibility Criteria</h6>
-                        <p>Age: 17+, 10+2 completion with ≥50% in physics and maths, valid DGCA Class 1 or 2 medical certificate.</p>
+                        <p>Age: 17+, 10+2 completion with ≥50% in physics and maths, valid DGCA Class 1 or 2 medical
+                          certificate.</p>
                       </div>
                     </div>
                   </div>
@@ -394,7 +407,8 @@
 
                       <div class="timeline-text">
                         <h6>Choose Flying School</h6>
-                        <p>Research approved DGCA flying schools in India, compare facilities, course duration, and fees for informed decision.</p>
+                        <p>Research approved DGCA flying schools in India, compare facilities, course duration, and fees
+                          for informed decision.</p>
                       </div>
                     </div>
                   </div>
@@ -416,7 +430,8 @@
 
                       <div class="timeline-text">
                         <h6>Enrol in a Pilot Training Course</h6>
-                        <p>Enroll in pilot training course at selected school, covering ground, flight, and simulator training; duration varies by license type.</p>
+                        <p>Enroll in pilot training course at selected school, covering ground, flight, and simulator
+                          training; duration varies by license type.</p>
                       </div>
                     </div>
                   </div>
@@ -438,7 +453,8 @@
 
                       <div class="timeline-text">
                         <h6>Complete Flight Hours and Exams</h6>
-                        <p>For a commercial pilot license, fulfill 200 flight hours with 100 solo and 50 cross-country hours, passing DGCA exams. PPL requires 40-50 hours.</p>
+                        <p>For a commercial pilot license, fulfill 200 flight hours with 100 solo and 50 cross-country
+                          hours, passing DGCA exams. PPL requires 40-50 hours.</p>
                       </div>
                     </div>
                   </div>
@@ -460,7 +476,8 @@
 
                       <div class="timeline-text">
                         <h6>Obtain a Commercial Pilot Licence</h6>
-                        <p>Apply for a commercial pilot license from the DGCA after meeting flight hour, exam, and medical requirements, including age criteria.</p>
+                        <p>Apply for a commercial pilot license from the DGCA after meeting flight hour, exam, and
+                          medical requirements, including age criteria.</p>
                       </div>
                     </div>
                   </div>
@@ -482,7 +499,8 @@
 
                       <div class="timeline-text">
                         <h6>Build Flight Experience</h6>
-                        <p>Gain experience as a co-pilot for at least 250 hours after obtaining your commercial pilot license before applying for a pilot-in-command position.</p>
+                        <p>Gain experience as a co-pilot for at least 250 hours after obtaining your commercial pilot
+                          license before applying for a pilot-in-command position.</p>
                       </div>
                     </div>
                   </div>
@@ -1142,7 +1160,7 @@
   <!-- Testimonial Start -->
   <section class="testimonial">
     <div class="container-xxl py-6">
-      <div class="container" >
+      <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
           <h6 class="text-primary text-uppercase mb-2">Testimonial</h6>
           <h1 class="display-6 mb-4">What Our Students Say!</h1>
@@ -1163,9 +1181,9 @@
             <video autoplay controls muted loop>
               <source src="/adynamics3/assets/video/Testimonial 1.mov" type="video/mp4">
             </video>
+          </div>
         </div>
       </div>
-    </div>
   </section>
   <!-- Testimonial End -->
 
@@ -1328,66 +1346,70 @@
   <!-- Footer Start -->
   <footer class="new_footer_area bg_color">
     <div class="new_footer_top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                        <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
-                        <p>Don’t miss any updates of our new templates and extensions.!</p>
-                        <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
-                            <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
-                            <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
-                            <p class="mchimp-errmessage" style="display: none;"></p>
-                            <p class="mchimp-sucmessage" style="display: none;"></p>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-                        <h3 class="f-title f_600 t_color f_size_18">Download</h3>
-                        <ul class="list-unstyled f_list">
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Android App</a></li>
-                            <li><a href="#">ios App</a></li>
-                            <li><a href="#">Desktop</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">My tasks</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
-                        <h3 class="f-title f_600 t_color f_size_18">Help</h3>
-                        <ul class="list-unstyled f_list">
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Term &amp; conditions</a></li>
-                            <li><a href="#">Reporting</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Support Policy</a></li>
-                            <li><a href="#">Privacy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
-                        <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
-                        <div class="f_social_icon">
-                            <a href="#" class="fab fa-facebook"></a>
-                            <a href="#" class="fab fa-twitter"></a>
-                            <a href="#" class="fab fa-linkedin"></a>
-                            <a href="#" class="fab fa-pinterest"></a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+              style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+              <p>Don’t miss any updates of our new templates and extensions.!</p>
+              <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                <p class="mchimp-errmessage" style="display: none;"></p>
+                <p class="mchimp-sucmessage" style="display: none;"></p>
+              </form>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+              style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Android App</a></li>
+                <li><a href="#">ios App</a></li>
+                <li><a href="#">Desktop</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">My tasks</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+              style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Term &amp; conditions</a></li>
+                <li><a href="#">Reporting</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Support Policy</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+              style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+              <div class="f_social_icon">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-pinterest"></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="footer_bg">
-            <div class="footer_bg_one"></div>
-            <div class="footer_bg_two"></div>
-        </div>
+      </div>
+      <div class="footer_bg">
+        <div class="footer_bg_one"></div>
+        <div class="footer_bg_two"></div>
+      </div>
     </div>
-    
-</footer>
+
+  </footer>
   <!-- Footer End -->
 
   <!-- Copyright Start -->
@@ -1399,16 +1421,22 @@
       class="bi bi-whatsapp"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  
+
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
