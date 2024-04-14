@@ -7,22 +7,21 @@ path:hover {
 }
 
 .map {
-  width: 100%;
+  width: 100rem;
   height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 15%;
+  align-self: center;
 }
 
 .map svg {
-  width: 100%;
+  width: 200rem;
   height: 100vh;
   top: 0;
-  left: 0;
+  left: 15%;
   position: relative;
 }
 
@@ -78,15 +77,19 @@ path:hover {
 .ripple-1 {
   animation-delay: 0.1s;
   position: absolute;
-  top: 35rem;
+  top: 15rem;
   left: 30rem;
 }
 
 .ripple-2 {
   animation-delay: 2s;
   position: absolute;
-  top: 52.7rem;
-  left: 55.5rem;
+  top: 32.7rem;
+  left: 54.4rem;
+}
+
+.mobile-view {
+  display: none;
 }
 
 @keyframes ripple {
@@ -101,5 +104,16 @@ path:hover {
                 0 0 0 1.2rem rgba(21, 148, 159, 0.501),
                 0 0 0 1.5rem rgba(21, 148, 159, 0.247),
                 0 0 0 3rem rgba(21, 148, 159, 0.072);
+  }
+}
+
+@media (max-width: 768px) {
+  .map {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+    margin: 1rem;
   }
 }
