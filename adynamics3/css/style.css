@@ -535,3 +535,32 @@ nav {
 .hero {
   background-color: #006dda;
 }
+
+.testimonial{
+  text-align: center;
+}
+
+.testimonial .personail{
+  padding: 2rem;
+}
+
+.testimonial .personail .employee_name h5{
+  font-size: 1.5rem;
+}
+
+.testimonial .personail p{
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+.testimonial .personal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial .personal video{
+  height: 40rem;
+}
+
+
