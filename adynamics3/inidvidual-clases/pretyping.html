@@ -30,6 +30,9 @@
   <!-- Template Stylesheet -->
   <link href="../css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="../css/course-details.css" />
+  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css2/style.css">
+  <link rel="stylesheet" href="../check.css">
 </head>
 
 <body>
@@ -72,73 +75,56 @@
   <!-- Navbar End -->
 
   <!-- Detail Start -->
-  <div class="container-fluid py-5 pb-0">
-    <div class="container py-3">
+  <section class="hero py-2 py-xl-5 py-6 imSection-bg" style="margin-top:-50px">
+    <div class="container-xxl grid py-3 mt-xl-1">
       <div class="row">
-        <div class="col-lg-8">
-          <div class="mb-5">
-            <div class="section-title position-relative mb-1">
-              <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">
-                Course Detail
-              </h6>
-              <h1 class="display-4">
-                A320 Pre Type Rating Class</h1>
-            </div>
-            <p class="mt-4">
-              Our DGCA CPL training program prepares you for the final step in
-              your journey to becoming a certified commercial pilot. You'll
-              learn all the essential skills and knowledge you need to be a
-              successful commercial pilot, including air navigation, radio
-              navigation, instrumentation, flight planning. mass and balance.
-            </p>
+        <div class="hero-text-section col-lg-6 order-lg-1 order-2 py-3 py-sm-5">
+          <div class="hero-text-wrapper text-lg-start text-center px-0 px-sm-4">
+            <strong>
+              <p class="text-xl">WELCOME TO ADYNAMICS</p>
+            </strong>
+            <h1 class="pt- display-6">
+              Mumbai NO.1 Rated Online Flying Aviation Training Center
+            </h1>
 
-            <div class="py-4 px-2 d-flex justify-content-center justify-content-xl-start">
-              <a class="btn btn-block hero-btn-course-details border-r10 py-3 px-5" href="">Enroll Now</a>
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary"
+                style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
+                More</a>
+
+              <button class="flex-btn flex-re">
+                <div class="btn-icon" style="background-color: #49aaaa;">
+                  <ion-icon name="play" aria-hidden="true"></ion-icon>
+                </div>
+
+                <span class="span" style="color: #49aaaa;">Demo Class</span>
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 mt-xl- mt-lg-0">
-          <div class="mb-5 py-3 border-r10 course-feature-wrapper">
-            <h4 class="text-dark py-3 px-4 m-0 text-center">
-              Course Features
-            </h4>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Instructor</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                John Doe
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Rating</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                4.5 <small>(250)</small>
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Lectures</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                15 sections
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4">
-              <h6 class="my-3 course-feature-head">Duration</h6>
-              <h6 class="text-secondary my-3 course-feature-value">
-                10.00 Hrs
-              </h6>
-            </div>
-            <div class="d-flex justify-content-between px-4 pb-3">
-              <h6 class="my-3 course-feature-head">Skill level</h6>
-
-              <h6 class="text-secondary my-3 course-feature-value">
-                All Level
-              </h6>
-            </div>
-          </div>
+        <div class="hero-video-section col-lg-6 order-lg-2 py-5">
+          <img fetchpriority="high" decoding="async" width="900" height="506"
+            class="img-fluid mw-sm-100 w-md-80 w-lg-80" src="../img/thumbnail.png" srcset="
+            ../img/thumbnail.png        900w,
+            ../img/thumbnail.png 300w,
+            ../img/thumbnail.png 768w
+            " sizes="(max-width: 900px) 100vw, 900px" />
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+              <g id="Group_205" data-name="Group 205" transform="translate(-1462 -4918)">
+                <circle id="Ellipse_12" data-name="Ellipse 12" cx="25" cy="25" r="25" transform="translate(1462 4918)"
+                  fill="#fff"></circle>
+                <path id="play-svgrepo-com"
+                  d="M8.286,3.407A1.5,1.5,0,0,0,6,4.684V19.316a1.5,1.5,0,0,0,2.286,1.277l11.888-7.316a1.5,1.5,0,0,0,0-2.555Z"
+                  transform="translate(1475.556 4931)" fill="#49aaaa"></path>
+              </g>
+            </svg>
+          </a>
+          <div class="video-background-lg d-none d-xxl-block"></div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- Detail End -->
 
   <!-- topics section  -->
@@ -568,49 +554,69 @@
   <!-- related-courses end -->
 
   <!-- Footer Start -->
-  <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-6 mt-4 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
-          <h4 class="text-white mb-4">Get In Touch</h4>
-
-          <p class="mb-2">
-            <i class="fa fa-map-marker-alt me-3"></i>Bengaluru, Karanataka,
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-phone-alt me-3"></i>+91-8296076136
-          </p>
-          <p class="mb-2">
-            <i class="fa fa-envelope me-3"></i>himanshu@adynamics.in
-          </p>
+  <footer class="new_footer_area bg_color">
+    <div class="new_footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                        <p>Don’t miss any updates of our new courses</p>
+                        <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                            <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                            <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                            <p class="mchimp-errmessage" style="display: none;"></p>
+                            <p class="mchimp-sucmessage" style="display: none;"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Courses</h3>
+                        <ul class="list-unstyled f_list">
+                            <li><a href="#">A320 Pre Type Rating Class</a></li>
+                            <li><a href="#">DGca CPL Classes</a></li>
+                            <li><a href="#">Radio Telephony (rtr) Class</a></li>
+                            <li><a href="#">NIOS Prep Class</a></li>
+                            <li><a href="#">cpl conversion</a></li>
+                            <li><a href="#">
+                              sacAA CPL</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                        <ul class="list-unstyled f_list">
+                            <li><a href="./testComponents/about-hero.html">About us</a></li>
+                            <li><a href="#testi">Testimonial</a></li>
+                            <li><a href="#teamm">Team</a></li>
+                            <li><a href="#demo">Demo Vedio</a></li>
+                            <li><a href="./testComponents/about-hero.html">Contact</a></li>
+                            <li><a href="./testComponents/clasess.html">Training</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+                        <div class="f_social_icon">
+                            <a href="#" class="fab fa-facebook"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                            <a href="#" class="fab fa-pinterest"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <h4 class="text-light mb-4">Quick Links</h4>
-
-          <a class="btn btn-link" href="">About Us</a>
-          <a class="btn btn-link" href="">Contact Us</a>
-          <a class="btn btn-link" href="">Support</a>
+        <div class="footer_bg">
+            <div class="footer_bg_one"></div>
+            <div class="footer_bg_two"></div>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <h4 class="text-light mb-4">Quick Links</h4>
-          <a class="btn btn-link" href="">Our Services</a>
-          <a class="btn btn-link" href="">Terms & Condition</a>
-          <a class="btn btn-link" href="">Support</a>
-        </div>
-        <div class="col-lg-3 col-md-6">
-
-
-          <h6 class="text-white mt-4 mb-3">Follow Us</h6>
-          <div class="d-flex pt-2">
-            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-twitter"></i></a>
-            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-square btn-outline-light me-1" href=""><i class="fab fa-youtube"></i></a>
-            <a class="btn btn-square btn-outline-light me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+    
+</footer>
   <!-- Copyright End -->
 
   <!-- Back to Top -->
@@ -625,6 +631,9 @@
   <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
 
   <!-- Template Javascript -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
   <script src="../js/main.js"></script>
 </body>
 

@@ -1286,3 +1286,9 @@ box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
   grid-area: boeing737; 
   color: #012222;
 }
+
+@media only screen and (max-width: 500px) {
+  .flex-re{
+    display: none;
+  }
+}
