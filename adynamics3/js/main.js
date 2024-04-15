@@ -46,3 +46,14 @@
   });
   
 })(jQuery);
+
+function playDemoClass(){
+  $('.demo-class').show();
+}
+
+function closeDemoClass(){
+  $('.demo-class').hide();
+  let source = $('#player').attr('src');
+  $('#player').attr('src', '');
+  $('#player').attr('src', source);
+}
