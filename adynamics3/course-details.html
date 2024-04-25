@@ -37,6 +37,13 @@
 </head>
 
 <body>
+    <div class="demo-class">
+        <iframe src="https://www.youtube.com/embed/lKr-EdxFhnM?si=rVfbLDS_tgJVAEvE" id="player"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="close-demo-class" onclick="closeDemoClass()"><i class="fa fa-times"></i></button>
+      </div>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
@@ -94,7 +101,7 @@
                     style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
                     More</a>
     
-                  <button class="flex-btn flex-re">
+                  <button class="flex-btn flex-re" onclick="playDemoClass()">
                     <div class="btn-icon" style="background-color: #49aaaa;">
                       <ion-icon name="play" aria-hidden="true"></ion-icon>
                     </div>
