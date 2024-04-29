@@ -2,6 +2,16 @@
 
 .mobile-view {
   display: none;
+
+  img {
+    height: 20rem;
+    width: auto;
+  }
+
+  h2{
+    font-size: 1.5rem;
+    color: black;
+  }
 }
 
 .map {
@@ -74,7 +84,7 @@
 .morocco{
   display: none;
   position : absolute;
-  top: 80%;
+  top: 30%;
   left: 30%;
   z-index: 9999;
   .courses-item{
@@ -85,7 +95,7 @@
 .tunisia{
   display: none;
   position : absolute;
-  top: 75%;
+  top: 85%;
   left: 30%;
   z-index: 9999;
   .courses-item{
@@ -281,87 +291,7 @@
   }
 }
 
-@media screen and (min-width: 2560px) {
-  .usaPointer{
-    .pin{
-      top: 59%;
-      left: 23%;
-    }
-  
-    .pulse{
-      top: 59.7%;
-      left: 22.6%;
-      z-index: 999;
-    }
-  }
-  
-  .moroccoPointer{
-    .pin{
-      top: 64%;
-      left: 47%;
-    }
-  
-    .pulse{
-      top: 64.4%;
-      left: 46.6%;
-      z-index: 999;
-    }
-  }
-  
-  .tunisiaPointer{
-    .pin{
-      top: 60%;
-      left: 52%;
-    }
-  
-    .pulse{
-      top: 60.4%;
-      left: 51.5%;
-      z-index: 999;
-    }
-  }
-  
-  .southAfricaPointer{
-    .pin{
-      top: 105%;
-      left: 56%;
-    }
-  
-    .pulse{
-      top: 105.6%;
-      left: 55.6%;
-      z-index: 999;
-    }
-  }
-  
-  .argentinaPointer{
-    .pin{
-      top: 107%;
-      left: 32.7%;
-    }
-  
-    .pulse{
-      top: 107.5%;
-      left: 32.2%;
-      z-index: 999;
-    }
-  }
-  
-  .indiaPointer{
-    .pin{
-      top: 70%;
-      left: 71%;
-    }
-  
-    .pulse{
-      top: 70.4%;
-      left: 70.5%;
-      z-index: 999;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .usaPointer{
     .pin{
       top: 57%;
@@ -441,15 +371,15 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (max-width: 1440px) {
   .usaPointer{
     .pin{
-      top: 63%;
+      top: 73%;
       left: 24%;
     }
   
     .pulse{
-      top: 63.4%;
+      top: 73.4%;
       left: 23.2%;
       z-index: 999;
     }
@@ -457,12 +387,12 @@
   
   .moroccoPointer{
     .pin{
-      top: 68%;
+      top: 80%;
       left: 48.5%;
     }
   
     .pulse{
-      top: 68.4%;
+      top: 80.4%;
       left: 47.7%;
       z-index: 999;
     }
@@ -470,12 +400,12 @@
   
   .tunisiaPointer{
     .pin{
-      top: 67%;
+      top: 77%;
       left: 52.5%;
     }
   
     .pulse{
-      top: 67.4%;
+      top: 77.4%;
       left: 51.7%;
       z-index: 999;
     }
@@ -483,12 +413,12 @@
   
   .southAfricaPointer{
     .pin{
-      top: 105%;
+      top: 113%;
       left: 56.4%;
     }
   
     .pulse{
-      top: 105.6%;
+      top: 113.6%;
       left: 55.6%;
       z-index: 999;
     }
@@ -496,12 +426,12 @@
   
   .argentinaPointer{
     .pin{
-      top: 107%;
+      top: 115%;
       left: 32.7%;
     }
   
     .pulse{
-      top: 107.5%;
+      top: 115.5%;
       left: 32%;
       z-index: 999;
     }
@@ -509,13 +439,93 @@
   
   .indiaPointer{
     .pin{
-      top: 74%;
+      top: 83%;
       left: 71%;
     }
   
     .pulse{
-      top: 74.4%;
+      top: 83.4%;
       left: 70.3%;
+      z-index: 999;
+    }
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .usaPointer{
+    .pin{
+      top: 73%;
+      left: 23%;
+    }
+  
+    .pulse{
+      top: 73.7%;
+      left: 22.6%;
+      z-index: 999;
+    }
+  }
+  
+  .moroccoPointer{
+    .pin{
+      top: 79%;
+      left: 47%;
+    }
+  
+    .pulse{
+      top: 79.4%;
+      left: 46.6%;
+      z-index: 999;
+    }
+  }
+  
+  .tunisiaPointer{
+    .pin{
+      top: 75%;
+      left: 52%;
+    }
+  
+    .pulse{
+      top: 75.4%;
+      left: 51.5%;
+      z-index: 999;
+    }
+  }
+  
+  .southAfricaPointer{
+    .pin{
+      top: 120%;
+      left: 56%;
+    }
+  
+    .pulse{
+      top: 120.6%;
+      left: 55.6%;
+      z-index: 999;
+    }
+  }
+  
+  .argentinaPointer{
+    .pin{
+      top: 122%;
+      left: 32.7%;
+    }
+  
+    .pulse{
+      top: 122.5%;
+      left: 32.2%;
+      z-index: 999;
+    }
+  }
+  
+  .indiaPointer{
+    .pin{
+      top: 85%;
+      left: 71%;
+    }
+  
+    .pulse{
+      top: 85.4%;
+      left: 70.5%;
       z-index: 999;
     }
   }
