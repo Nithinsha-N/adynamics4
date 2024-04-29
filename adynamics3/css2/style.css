@@ -353,7 +353,6 @@ body {
 
 
 
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -718,7 +717,18 @@ body {
 /**
  * responsive for large than 575px screen
  */
-
+@media (min-width: 1200px){
+  .bottom-height{
+    margin-bottom: -90px;
+    margin-top: -15%;
+  }
+}
+@media (max-width: 400px){
+  .bottom-height{
+ 
+    margin-top: -15%;
+  }
+}
 @media (min-width: 575px) {
 
   /**
@@ -747,7 +757,7 @@ body {
     margin-inline: auto;
   }
 
-
+ 
 
   /**
    * HEADER
@@ -894,10 +904,18 @@ body {
   .hero { text-align: left; }
 
   .hero .container {
-    grid-template-columns: 1fr 0.7fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
+   .resize{
+    margin-left: 90px;
+   }
+
+   .hero-banner::before {
+
+    left: 70%;
+   }
   .hero-subtitle { margin-inline: 25px 0; }
 
   .hero .btn-group { justify-content: flex-start; }
@@ -1290,5 +1308,11 @@ box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
 @media only screen and (max-width: 500px) {
   .flex-re{
     display: none;
+  }
+  .chan{
+    margin-left: -55px;
+  }
+  .che{
+    margin-left: 40px;
   }
 }
