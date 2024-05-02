@@ -66,8 +66,8 @@
                                 class="nav-item nav-link nav-dropdown ">Classes</a>
                             <div class="dropdown-menu">
                                 <a href="/adynamics3/inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
-                                <a href="/adynamics3/course-details.html">DGca CPL Classes</a>
-                                <a href="/adynamics3/inidvidual-clases/RTR.html">Radio Telephony (rtr) Class</a>
+                                <a href="/adynamics3/course-details.html">DGCA CPL Classes</a>
+                                <a href="/adynamics3/inidvidual-clases/RTR.html">Radio Telephony (RTR) Class</a>
                                 <a href="/adynamics3/inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
                             </div>
                         </div>
@@ -766,8 +766,8 @@
                             <h3 class="f-title f_600 t_color f_size_18">Courses</h3>
                             <ul class="list-unstyled f_list">
                                 <li><a href="#">A320 Pre Type Rating Class</a></li>
-                                <li><a href="#">DGca CPL Classes</a></li>
-                                <li><a href="#">Radio Telephony (rtr) Class</a></li>
+                                <li><a href="#">DGCA CPL Classes</a></li>
+                                <li><a href="#">Radio Telephony (RTR) Class</a></li>
                                 <li><a href="#">NIOS Prep Class</a></li>
                                 <li><a href="#">cpl conversion</a></li>
                                 <li><a href="#">
