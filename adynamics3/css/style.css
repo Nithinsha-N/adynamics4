@@ -456,7 +456,7 @@ nav {
   bottom: 0;
   left: 0;
   translate: 1s;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .enquiry-button-nav:hover {
@@ -531,7 +531,7 @@ nav {
 
 .hero-banner {
   width: 30rem;
-  height: auto;
+  height: 30rem;
 }
 
 .hero {
@@ -572,6 +572,7 @@ nav {
   
   .hero-banner{
     width: 15rem;
+    height: 15rem;
   }
 
   .hero{
