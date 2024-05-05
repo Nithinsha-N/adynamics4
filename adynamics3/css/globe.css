@@ -1,5 +1,4 @@
 
-
 .mobile-view {
   display: none;
 
@@ -8,9 +7,32 @@
     width: auto;
   }
 
-  h2{
-    font-size: 1.5rem;
+  h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    color: rgb(26, 26, 26);
+  }
+
+  a{
     color: black;
+    background-color: #49aaaa;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+
+  .carousel-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0d8;
+    padding: 1rem;
+    border-radius: 2rem;
   }
 }
 
@@ -19,27 +41,27 @@
   height: 100%;
 }
 
-#AR{
+#AR {
   fill: #49aaaa;
 }
 
-#IN{
+#IN {
   fill: #49aaaa;
 }
 
-#US{
+#US {
   fill: #49aaaa;
 }
 
-#ZA{
+#ZA {
   fill: #49aaaa;
 }
 
-#TN{
+#TN {
   fill: #49aaaa;
 }
 
-#MA{
+#MA {
   fill: #49aaaa;
 }
 
@@ -54,77 +76,75 @@
   }
 }
 
-.india{
+.india {
   display: none;
-  position : absolute;
+  position: absolute;
   top: 50%;
   left: 30%;
   overflow: hidden;
   z-index: 9999;
 
-  .courses-item{
+  .courses-item {
     background-color: rgb(255, 255, 255);
   }
-
 }
 
-.usa{
+.usa {
   display: none;
-  position : absolute;
+  position: absolute;
   top: 50%;
   left: 40%;
   overflow: hidden;
   z-index: 9999;
 
-  .courses-item{
+  .courses-item {
     background-color: rgb(255, 255, 255);
   }
 }
 
-.morocco{
+.morocco {
   display: none;
-  position : absolute;
+  position: absolute;
   top: 30%;
   left: 30%;
   z-index: 9999;
-  .courses-item{
+  .courses-item {
     background-color: rgb(255, 255, 255);
   }
 }
 
-.tunisia{
+.tunisia {
   display: none;
-  position : absolute;
+  position: absolute;
   top: 85%;
   left: 30%;
   z-index: 9999;
-  .courses-item{
+  .courses-item {
     background-color: rgb(255, 255, 255);
   }
 }
 
-.south-africa{
+.south-africa {
   display: none;
-  position : absolute;
+  position: absolute;
   top: 70%;
   left: 30%;
   z-index: 9999;
-  .courses-item{
+  .courses-item {
     background-color: rgb(255, 255, 255);
   }
 }
 
-.argentina{
+.argentina {
   display: none;
-  position : absolute;
+  position: absolute;
   top: 70%;
   left: 30%;
   z-index: 9999;
-  .courses-item{
+  .courses-item {
     background-color: rgb(255, 255, 255);
   }
 }
-
 
 .pin {
   width: 30px;
@@ -134,7 +154,7 @@
   position: absolute;
   transform: rotate(-45deg);
   margin: -20px 0 0 -20px;
-  border: #00000076 2px solid ;
+  border: #00000076 2px solid;
 }
 .pin:after {
   content: "";
@@ -212,79 +232,78 @@
   }
 }
 
-
-.usaPointer{
-  .pin{
+.usaPointer {
+  .pin {
     top: 65%;
     left: 25%;
   }
 
-  .pulse{
+  .pulse {
     top: 65.7%;
     left: 24.45%;
     z-index: 999;
   }
 }
 
-.moroccoPointer{
-  .pin{
+.moroccoPointer {
+  .pin {
     top: 70%;
     left: 48%;
   }
 
-  .pulse{
+  .pulse {
     top: 70.6%;
     left: 47.3%;
     z-index: 999;
   }
 }
 
-.tunisiaPointer{
-  .pin{
+.tunisiaPointer {
+  .pin {
     top: 67.4%;
     left: 52.5%;
   }
 
-  .pulse{
+  .pulse {
     top: 67.9%;
     left: 51.8%;
     z-index: 999;
   }
 }
 
-.southAfricaPointer{
-  .pin{
+.southAfricaPointer {
+  .pin {
     top: 105%;
     left: 56%;
   }
 
-  .pulse{
+  .pulse {
     top: 105.6%;
     left: 55.3%;
     z-index: 999;
   }
 }
 
-.argentinaPointer{
-  .pin{
+.argentinaPointer {
+  .pin {
     top: 107%;
     left: 33%;
   }
 
-  .pulse{
+  .pulse {
     top: 107.5%;
     left: 32.2%;
     z-index: 999;
   }
 }
 
-.indiaPointer{
-  .pin{
+.indiaPointer {
+  .pin {
     top: 75%;
     left: 71%;
   }
 
-  .pulse{
+  .pulse {
     top: 75.6%;
     left: 70.2%;
     z-index: 999;
@@ -292,78 +311,78 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .usaPointer{
-    .pin{
+  .usaPointer {
+    .pin {
       top: 57%;
       left: 24%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 57.4%;
       left: 23.2%;
       z-index: 999;
     }
   }
-  
-  .moroccoPointer{
-    .pin{
+
+  .moroccoPointer {
+    .pin {
       top: 60%;
       left: 48.4%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 60.4%;
       left: 47.6%;
       z-index: 999;
     }
   }
-  
-  .tunisiaPointer{
-    .pin{
+
+  .tunisiaPointer {
+    .pin {
       top: 58%;
       left: 53%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 58.4%;
       left: 52.2%;
       z-index: 999;
     }
   }
-  
-  .southAfricaPointer{
-    .pin{
+
+  .southAfricaPointer {
+    .pin {
       top: 85%;
       left: 57%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 85.4%;
       left: 55.9%;
       z-index: 999;
     }
   }
-  
-  .argentinaPointer{
-    .pin{
+
+  .argentinaPointer {
+    .pin {
       top: 87%;
       left: 32.9%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 87.3%;
       left: 32%;
       z-index: 999;
     }
   }
-  
-  .indiaPointer{
-    .pin{
+
+  .indiaPointer {
+    .pin {
       top: 63%;
       left: 71.4%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 63.4%;
       left: 70.5%;
       z-index: 999;
@@ -372,78 +391,78 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .usaPointer{
-    .pin{
+  .usaPointer {
+    .pin {
       top: 73%;
       left: 24%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 73.4%;
       left: 23.2%;
       z-index: 999;
     }
   }
-  
-  .moroccoPointer{
-    .pin{
+
+  .moroccoPointer {
+    .pin {
       top: 80%;
       left: 48.5%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 80.4%;
       left: 47.7%;
       z-index: 999;
     }
   }
-  
-  .tunisiaPointer{
-    .pin{
+
+  .tunisiaPointer {
+    .pin {
       top: 77%;
       left: 52.5%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 77.4%;
       left: 51.7%;
       z-index: 999;
     }
   }
-  
-  .southAfricaPointer{
-    .pin{
+
+  .southAfricaPointer {
+    .pin {
       top: 113%;
       left: 56.4%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 113.6%;
       left: 55.6%;
       z-index: 999;
     }
   }
-  
-  .argentinaPointer{
-    .pin{
+
+  .argentinaPointer {
+    .pin {
       top: 115%;
       left: 32.7%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 115.5%;
       left: 32%;
       z-index: 999;
     }
   }
-  
-  .indiaPointer{
-    .pin{
+
+  .indiaPointer {
+    .pin {
       top: 83%;
       left: 71%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 83.4%;
       left: 70.3%;
       z-index: 999;
@@ -452,78 +471,78 @@
 }
 
 @media screen and (max-width: 2560px) {
-  .usaPointer{
-    .pin{
+  .usaPointer {
+    .pin {
       top: 73%;
       left: 23%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 73.7%;
       left: 22.6%;
       z-index: 999;
     }
   }
-  
-  .moroccoPointer{
-    .pin{
+
+  .moroccoPointer {
+    .pin {
       top: 79%;
       left: 47%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 79.4%;
       left: 46.6%;
       z-index: 999;
     }
   }
-  
-  .tunisiaPointer{
-    .pin{
+
+  .tunisiaPointer {
+    .pin {
       top: 75%;
       left: 52%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 75.4%;
       left: 51.5%;
       z-index: 999;
     }
   }
-  
-  .southAfricaPointer{
-    .pin{
+
+  .southAfricaPointer {
+    .pin {
       top: 120%;
       left: 56%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 120.6%;
       left: 55.6%;
       z-index: 999;
     }
   }
-  
-  .argentinaPointer{
-    .pin{
+
+  .argentinaPointer {
+    .pin {
       top: 122%;
       left: 32.7%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 122.5%;
       left: 32.2%;
       z-index: 999;
     }
   }
-  
-  .indiaPointer{
-    .pin{
+
+  .indiaPointer {
+    .pin {
       top: 85%;
       left: 71%;
     }
-  
-    .pulse{
+
+    .pulse {
       top: 85.4%;
       left: 70.5%;
       z-index: 999;
