@@ -1,71 +1,35 @@
-$("#AR").mouseover(function() {
-    $(".argentina").show();
+var world = document.getElementsByTagName("path");
+for (var i = 0; i < world.length; i++) {
+  var country = world[i];
+  country.setAttribute("data-toggle", "tooltip");
+  country.setAttribute("data-placement", "top");
+  country.setAttribute("title", country.getAttribute("id"));
+}
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
-$("#AR").mouseout(function() {
-    $(".argentina").hide();
+$("#south_africa").click(function () {
+  window.location.href = "../inidvidual-clases/cplsouth.html";
 });
 
-$("#US").mouseover(function() {
-    $(".usa").show();
+$("#south_africa").mouseover(function () {
+  $(".south-africa").show();
 });
 
-$("#US").mouseout(function() {
-    $(".usa").hide();
+$("#south_africa").mouseout(function () {
+  $(".south-africa").hide();
 });
 
-$("#ZA").mouseover(function() {
-    $(".south-africa").show();
+$("#usa").click(function () {
+  window.location.href = "../inidvidual-clases/cpltaring.html";
 });
 
-$("#ZA").mouseout(function() {
-    $(".south-africa").hide();
+$("#usa").mouseover(function () {
+  $(".usa").show();
 });
 
-$("#MA").mouseover(function() {
-    $(".morocco").show();
-});
-
-$("#MA").mouseout(function() {
-    $(".morocco").hide();
-});
-
-$("#TN").mouseover(function() {
-    $(".tunisia").show();
-});
-
-$("#TN").mouseout(function() {
-    $(".tunisia").hide();
-});
-
-$("#IN").mouseover(function() {
-    $(".india").show();
-});
-
-$("#IN").mouseout(function() {
-    $(".india").hide();
-});
-
-$("#US").click(function() {
-    window.location.href = "/adynamics3/inidvidual-clases/cpltaring.html";
-});
-
-$("#ZA").click(function() {
-    window.location.href = "/adynamics3/inidvidual-clases/cplsouth.html";
-});
-
-$("#MA").click(function() {
-    window.location.href = "/adynamics3/inidvidual-clases/cplmorocco.html";
-});
-
-$("#TN").click(function() {
-    window.location.href = "/adynamics3/inidvidual-clases/cpltunisia.html";
-});
-
-$("#AR").click(function() {
-    window.location.href = "/adynamics3/inidvidual-clases/cplargentina.html";
-});
-
-$("#IN").click(function() {
-    window.location.href = "/adynamics3/inidvidual-clases/CONVESION.html";
+$("#usa").mouseout(function () {
+  $(".usa").hide();
 });
