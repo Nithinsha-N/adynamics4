@@ -118,8 +118,9 @@ path:hover {
 }
 
 .map {
-  width: 100rem;
-  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -129,10 +130,8 @@ path:hover {
 }
 
 .map svg {
-  width: 200rem;
-  height: 100vh;
-  top: 0;
-  left: 15%;
+  width: 100%;
+  height: auto;
   position: relative;
 }
 
@@ -144,7 +143,15 @@ path:hover {
   fill: #46aaaa;
 }
 
-.map #ethiopia {
+.map #argentina {
+  fill: #46aaaa;
+}
+
+.map #morocco {
+  fill: #46aaaa;
+}
+
+.map #tunisia {
   fill: #46aaaa;
 }
 
@@ -152,67 +159,8 @@ path:hover {
   fill: #46aaaa;
 }
 
-.south-africa {
-  display: none;
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  .courses-item{
-    background-color: aliceblue;
-  }
-}
-
-.usa {
-  display: none;
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  .courses-item{
-    background-color: aliceblue;
-  }
-}
-
-.ripple {
-  background-color: #006857;
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 200rem;
-  animation: ripple 3s linear infinite;
-  position: absolute;
-  z-index: 999;
-}
-
-.ripple-1 {
-  animation-delay: 0.1s;
-  position: absolute;
-  top: 15rem;
-  left: 30rem;
-}
-
-.ripple-2 {
-  animation-delay: 2s;
-  position: absolute;
-  top: 32.7rem;
-  left: 54.4rem;
-}
-
 .mobile-view {
   display: none;
-}
-
-@keyframes ripple {
-  0% {
-    box-shadow: 0 0 0 0rem rgba(148, 148, 148, 0.2),
-                0 0 0 0.4rem rgba(40, 139, 113, 0.2),
-                0 0 0 1rem rgba(117, 117, 117, 0.2),
-                0 0 0 1rem rgba(21, 148, 159, 0.306);
-  }
-  100% {
-    box-shadow: 0 0 0 1rem rgba(21, 148, 159, 0.436),
-                0 0 0 1.2rem rgba(21, 148, 159, 0.501),
-                0 0 0 1.5rem rgba(21, 148, 159, 0.247),
-                0 0 0 3rem rgba(21, 148, 159, 0.072);
-  }
 }
 
 @media (max-width: 768px) {
