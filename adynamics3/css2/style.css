@@ -965,9 +965,9 @@ body {
     align-items: center;
   }
 
-  .resize {
-    margin-left: 90px;
-  }
+   .resize{
+    margin-left: 68px;
+   }
 
   .hero-banner::before {
     left: 70%;
