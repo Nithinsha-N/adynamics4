@@ -1,6 +1,7 @@
 var world = document.getElementsByTagName("path");
 for (var i = 0; i < world.length; i++) {
   var country = world[i];
+  if (country.getAttribute("id") == 'plane') continue;
   country.setAttribute("data-toggle", "tooltip");
   country.setAttribute("data-placement", "top");
   country.setAttribute("title", country.getAttribute("id"));
@@ -19,7 +20,9 @@ $("#south_africa").mouseover(function () {
 });
 
 $("#south_africa").mouseout(function () {
-  $(".south-africa").hide();
+  setTimeout(function() {
+    $(".south-africa").fadeOut(1000);
+  }, 2000);
 });
 
 $("#usa").click(function () {
@@ -31,9 +34,66 @@ $("#usa").mouseover(function () {
 });
 
 $("#usa").mouseout(function () {
-  $(".usa").hide();
+    setTimeout(function() {
+    $(".usa").fadeOut(1000);
+  }, 2000);
 });
 
+$("#argentina").click(function () {
+  window.location.href = "../inidvidual-clases/cplargentina.html";
+});
+
+$("#argentina").mouseover(function () {
+  $(".argentina").show();
+});
+
+$("#argentina").mouseout(function () {
+    setTimeout(function() {
+    $(".argentina").fadeOut(1000);
+  }, 2000);
+});
+
+$("#tunisia").click(function () {
+  window.location.href = "../inidvidual-clases/cpltunisia.html";
+});
+
+$("#tunisia").mouseover(function () {
+  $(".tunisia").show();
+});
+
+$("#tunisia").mouseout(function () {
+    setTimeout(function() {
+    $(".tunisia").fadeOut(1000);
+  }, 2000);
+});
+
+$("#morocco").click(function () {
+  window.location.href = "../inidvidual-clases/cplmorocco.html";
+});
+
+$("#morocco").mouseover(function () {
+  $(".morocco").show();
+});
+
+$("#morocco").mouseout(function () {
+    setTimeout(function() {
+    $(".morocco").fadeOut(1000);
+  }, 2000);
+});
+
+$("#india").click(function () {
+  window.location.href = "../inidvidual-clases/cpltaring.html";
+});
+
+$("#india").mouseover(function () {
+  $(".india").show();
+});
+
+$("#india").mouseout(function () {
+    setTimeout(function() {
+    $(".india").fadeOut(1000);
+  }, 2000);
+});
 function positionMarkers() {
   const countryPaths = {
     country1: document.getElementById('india'),
@@ -52,9 +112,9 @@ function positionMarkers() {
       const centerX = bbox.x + bbox.width / 2; // Calculate center X
       const centerY = bbox.y + bbox.height / 2; // Calculate center Y
 
-      // Adjust marker position based on its size
+      // Adjust marker position based on its size and special cases (e.g. Tunisia)
       marker.setAttribute('x', centerX - marker.getAttribute('width') / 2 - 3);
-      marker.setAttribute('y', centerY - marker.getAttribute('height') / 2 -5);
+      marker.setAttribute('y', countryId === 'country5' ? centerY - marker.getAttribute('height') / 2 - 11 : centerY - marker.getAttribute('height') / 2 - 5);
   });
 }
 
