@@ -36,11 +36,11 @@
 }
 
 .india {
+  width: 50%;
   display: none;
   position: absolute;
-  top: 50%;
-  left: 30%;
-  overflow: hidden;
+  top: 10%;
+  left: 50%;
   z-index: 9999;
 
   .courses-item {
@@ -49,23 +49,23 @@
 }
 
 .usa {
+  width: 50%;
   display: none;
   position: absolute;
-  top: 50%;
-  left: 40%;
-  overflow: hidden;
+  top: 20%;
+  left: 30%;
   z-index: 9999;
-
   .courses-item {
     background-color: rgb(255, 255, 255);
   }
 }
 
 .morocco {
+  width: 50%;
   display: none;
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 50%;
+  left: 0;
   z-index: 9999;
 
   .courses-item {
@@ -74,9 +74,10 @@
 }
 
 .tunisia {
+  width: 50%;
   display: none;
   position: absolute;
-  top: 85%;
+  top: 50%;
   left: 30%;
   z-index: 9999;
 
@@ -86,10 +87,11 @@
 }
 
 .south-africa {
+  width:50%;
   display: none;
   position: absolute;
-  top: 70%;
-  left: 30%;
+  top: 30%;
+  left: 50%;
   z-index: 9999;
 
   .courses-item {
@@ -98,10 +100,11 @@
 }
 
 .argentina {
+  width: 50%;
   display: none;
   position: absolute;
   top: 70%;
-  left: 30%;
+  left: 35%;
   z-index: 9999;
 
   .courses-item {
@@ -122,7 +125,6 @@ path:hover {
   margin: 0 auto;
   height: auto;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
