@@ -5424,12 +5424,6 @@ textarea.form-control-lg {
   color: #757575;
 }
 
-@media (max-width:992px){
-  .carouselExampleIndicators{
-    border: 2px solid red;
-  }
-}
-
 .carousel {
   position: relative;
 }
@@ -5510,7 +5504,7 @@ textarea.form-control-lg {
 .carousel-control-next {
   position: absolute;
   top: 0;
-  margin: auto 0;
+  border: 0;
   height: 10%;
   bottom: 0;
   z-index: 1;
