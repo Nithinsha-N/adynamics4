@@ -82,7 +82,7 @@ $("#morocco").mouseout(function () {
 });
 
 $("#india").click(function () {
-  window.location.href = "../inidvidual-clases/cpltaring.html";
+  window.location.href = "../inidvidual-clases/CONVESION.html";
 });
 
 $("#india").mouseover(function () {
