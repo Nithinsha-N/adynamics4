@@ -1,87 +1,72 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Form container styles */
-.container {
-  max-width: 800px;
-  margin: auto;
+.form-container {
+  margin: 2rem;
   padding: 20px;
-}
-
-.container .row .form-tagline{
-    border-radius: 2rem;
-    background: linear-gradient(90deg, #49aaaa, #ffffff00);
-    height: 100%;
-    padding: 20px;
-    padding-top: 2rem;
-}
-
-/* Form header styles */
-#form-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#title {
-  margin-bottom: 20px;
-  font-weight: 800;
-}
-
-/* Form tagline styles */
-#form-tagline {
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 600;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 5em;
 }
 
-.form-tagline {
+.form-container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+form {
   margin-top: 20px;
 }
 
-/* Form content styles */
-#form-content {
-  padding: 20px;
-  /* background-color: #f4f4f4; */
-  border-radius: 10px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-/* Form input styles */
-.form-group {
-  margin-bottom: 20px;
+.form-container i {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
-.form-control {
+.form-container input,
+.form-container select,
+.form-container textarea {
+  flex: 1;
+  padding: 10px;
   border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-label{
-    font-weight: 800;
-    font-size: 1.2rem;
-}
-
-/* Submit button styles */
-.submit-button {
-  text-align: center;
-}
-
-#submit {
+.form-container button {
+  width: 30%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 40px;
   background-color: #49aaaa;
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-#submit:hover {
-  background-color: #2b7070;
+.form-container button:hover {
+  background-color: #3d8b8b;
+}
+
+.enquiry-section {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container img {
+  margin-top: 20px;
+  min-width: 450px;
+  height: 500px;
+  border-radius: 12px;
+  clip: auto;
+}
+
+@media (max-width: 992px) {
+  .form-container img {
+    display: none;
+  }
 }
