@@ -22,7 +22,7 @@ $("#south_africa").mouseover(function () {
 $("#south_africa").mouseout(function () {
   setTimeout(function() {
     $(".south-africa").fadeOut(1000);
-  }, 2000);
+  }, 3000);
 });
 
 $("#usa").click(function () {
@@ -36,7 +36,7 @@ $("#usa").mouseover(function () {
 $("#usa").mouseout(function () {
     setTimeout(function() {
     $(".usa").fadeOut(1000);
-  }, 2000);
+  }, 3000);
 });
 
 $("#argentina").click(function () {
@@ -50,7 +50,7 @@ $("#argentina").mouseover(function () {
 $("#argentina").mouseout(function () {
     setTimeout(function() {
     $(".argentina").fadeOut(1000);
-  }, 2000);
+  }, 3000);
 });
 
 $("#tunisia").click(function () {
@@ -64,7 +64,7 @@ $("#tunisia").mouseover(function () {
 $("#tunisia").mouseout(function () {
     setTimeout(function() {
     $(".tunisia").fadeOut(1000);
-  }, 2000);
+  }, 3000);
 });
 
 $("#morocco").click(function () {
@@ -78,7 +78,7 @@ $("#morocco").mouseover(function () {
 $("#morocco").mouseout(function () {
     setTimeout(function() {
     $(".morocco").fadeOut(1000);
-  }, 2000);
+  }, 3000);
 });
 
 $("#india").click(function () {
@@ -92,8 +92,10 @@ $("#india").mouseover(function () {
 $("#india").mouseout(function () {
     setTimeout(function() {
     $(".india").fadeOut(1000);
-  }, 2000);
+  }, 3000);
 });
+
+
 function positionMarkers() {
   const countryPaths = {
     country1: document.getElementById('india'),
