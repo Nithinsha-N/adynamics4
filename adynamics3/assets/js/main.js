@@ -258,7 +258,7 @@
 }());
 
 function redirectEnquiry(){
-	  window.location.href = "./adynamics3/enquiry.html";
+	  window.location.href = "../../adynamics3/enquiry.html";
 }
 
 document.addEventListener('DOMContentLoaded', function () {
