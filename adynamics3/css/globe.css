@@ -74,11 +74,11 @@
 }
 
 .tunisia {
-  width: 50%;
   display: none;
+  gap: 1em;
+  width:60%;
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 45%;
   z-index: 9999;
 
   .courses-item {
@@ -173,5 +173,11 @@ path:hover {
   .mobile-view {
     display: block;
     margin: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .image-wrapper{
+    
   }
 }
