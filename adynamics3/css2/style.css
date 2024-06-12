@@ -1462,13 +1462,14 @@ body {
 
 
     #background-wrap {
+    height: auto;
     bottom: 0;
     left: 0;
     padding-top: 50px;
     position: absolute;
     right: 0;
     top: 0;
-    z-index: -1;
+    z-index: -2;
     
   }
   

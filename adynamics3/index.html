@@ -201,16 +201,14 @@
     }
 
     .hero-container {
-      overflow: hidden;
       justify-content: center;
       background: rgba(89, 219, 219, 0.581);
       background: linear-gradient(180deg, rgba(89, 219, 219, 0.678) 0%, rgba(255,255,255,1) 100%); 
       padding-block: 5rem;
       margin-bottom: 5rem;
-      position: relative;
       display: flex;
-      z-index: -1;
-      height: 85vh;
+      z-index: 1;
+      position: relative;
     }
 
     .content-wrapper {
@@ -219,14 +217,12 @@
     }
 
     .img-wrapper {
-      width: 25vw;
       display: flex;
       align-items: center;
     }
 
     .img-wrapper img {
       width: 100%;
-      height: auto;
     }
 
     .fade-in-right {
@@ -255,7 +251,6 @@
       .hero-container{
         display: block;
         margin: 0 auto;
-        height: 100vh;
       }
       .typewriter h1 {
         font-size: 4vw;
@@ -269,6 +264,7 @@
         font-size: 2rem;
       }
       .img-wrapper {
+
         width: 50vw;
         min-width: 300px;
         margin: 0 auto;
@@ -320,13 +316,7 @@
     <div class="spinner-grow text-primary" role="status"></div>
   </div>
 
-  <div class="demo-class">
-    <iframe src="https://www.youtube.com/embed/lKr-EdxFhnM?si=rVfbLDS_tgJVAEvE" id="player" title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <button class="close-demo-class" onclick="closeDemoClass()"><i class="fa fa-times"></i></button>
-  </div>
+  
   <!-- Spinner End -->
   <!-- Topbar Start -->
   <div class="container-fluid bg-dark text-light p-0">
@@ -474,6 +464,13 @@
       </div> -->
     </div>  
     <div class="content-wrapper ">
+      <div class="demo-class">
+        <iframe src="https://www.youtube.com/embed/lKr-EdxFhnM?si=rVfbLDS_tgJVAEvE" id="player" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="close-demo-class" onclick="closeDemoClass()"><i class="fa fa-times"></i></button>
+      </div>
       <p class="hero-subtitle">Welcome to ADynamics</p>
       <div class="typewriter">
         <h1 class="h1 hero-title">Ready to Awaken the Aviator in You?</h1>
