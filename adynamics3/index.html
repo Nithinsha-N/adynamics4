@@ -199,6 +199,117 @@
         margin-left: -43px;
       }
     }
+
+    .hero-container {
+      overflow: hidden;
+      justify-content: center;
+      background: rgba(89, 219, 219, 0.581);
+      background: linear-gradient(180deg, rgba(89, 219, 219, 0.678) 0%, rgba(255,255,255,1) 100%); 
+      padding-block: 5rem;
+      margin-bottom: 5rem;
+      position: relative;
+      display: flex;
+      z-index: -1;
+      height: 85vh;
+    }
+
+    .content-wrapper {
+      margin: auto 0;
+      width: 55%;
+    }
+
+    .img-wrapper {
+      width: 25vw;
+      display: flex;
+      align-items: center;
+    }
+
+    .img-wrapper img {
+      width: 100%;
+      height: auto;
+    }
+
+    .fade-in-right {
+      animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    .typewriter h1 {
+      font-size: 2.5vw;
+    }
+
+    @keyframes fade-in-right {
+      0% {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+
+
+    @media (max-width: 990px) {
+      .hero-container{
+        display: block;
+        margin: 0 auto;
+        height: 100vh;
+      }
+      .typewriter h1 {
+        font-size: 4vw;
+      }
+      .content-wrapper {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .hero-subtitle {
+        font-size: 2rem;
+      }
+      .img-wrapper {
+        width: 50vw;
+        min-width: 300px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 412px){
+      .hero-container{
+        height: auto;
+        padding-top: 2rem;
+      }
+
+      .content-wrapper {
+        border: none;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .typewriter h1{
+        width: 90%;
+        font-size: 2rem;;
+        display: flex;
+        flex-wrap: wrap;
+        animation: none;
+        white-space: wrap;
+        margin-top: 10px;
+      }
+
+      .content-wrapper p{
+        font-size: 1.5rem;
+        text-align: justify;
+        margin: 0 auto;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+
+      .img-wrapper{
+        display: none;
+      }
+    }
+
   </style>
 </head>
 
@@ -291,7 +402,7 @@
 
 
   <!--- #HERO --->
-  <section class="section hero" id="home" aria-label="hero">
+  <!-- <section class="section hero" id="home" aria-label="hero">
     <div class="container bottom-height" style=" padding-right: 0px;">
 
       <div class="hero-content">
@@ -338,6 +449,56 @@
 
 
 
+    </div>
+  </section> -->
+  <section class="hero-container ">
+    <div id="background-wrap">
+      <div class="x1">
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x2">
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x3">
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x4">
+          <div class="cloud"></div>
+      </div>
+  
+      <!-- <div class="x5">
+          <div class="cloud"></div>
+      </div> -->
+    </div>  
+    <div class="content-wrapper ">
+      <p class="hero-subtitle">Welcome to ADynamics</p>
+      <div class="typewriter">
+        <h1 class="h1 hero-title">Ready to Awaken the Aviator in You?</h1>
+      </div>
+      <p style="font-size: 1rem;color:black; width:90%">
+        Elevate your pilot journey with ADynamics – where a comprehensive curriculum, experienced instructors, and
+        global partnerships converge. From in-depth training to seamless career support, we're your catalyst for
+        aviation success.
+      </p>
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary" style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
+          More</a>
+
+        <button class="flex-btn" onclick="playDemoClass()">
+          <div class="btn-icon" style="background-color: #49aaaa;">
+            <ion-icon name="play" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span" style="color: #49aaaa;">Demo Class</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="img-wrapper">
+      <img class="fade-in-right" src="./img/Remove background project-Photoroom.png">
     </div>
   </section>
 
@@ -395,8 +556,8 @@
   <!-- Facts End -->
 
 
-  <!-- timilime starts -->
-  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+  <!-- timeline starts -->
+  <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md " style="overflow: hidden;">
     <div class=" row justify-content-center">
       <div class="col-12 col-sm-8 col-lg-6">
         <!-- Section Heading-->
@@ -1086,7 +1247,7 @@
 
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
                       style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                      <div class="timeline-text" ">
+                      <div class="timeline-text">
                           <h5 class=" fw-bold">Type Rating Course</h5>
                         <p class="text-muted mb-2 fw-bold"> </p>
                         <p class="text-muted">
@@ -1772,14 +1933,17 @@
           <div class="col-lg-3 col-md-6">
             <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
               style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-              <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
-              <p>Don’t miss any updates of our new courses</p>
-              <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
-                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
-                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
-                <p class="mchimp-errmessage" style="display: none;"></p>
-                <p class="mchimp-sucmessage" style="display: none;"></p>
-              </form>
+              <h3 class="f-title f_600 t_color f_size_18">Contact</h3>
+              <p><i class="fa fa-map-marker-alt me-2"></i>Bengaluru, Karnataka </p>
+              <p><i class="fa-solid fa-phone me-2"></i>+91-8296076136 </p>
+              <p style="display:flex;">
+                <i class="fa-solid fa-envelope me-2" style="padding-top:6px;"></i>
+                <span>
+                <a href="mailto:himanshu@adynamics.in">himanshu@adynamics.in</a>
+                <a href="mailto:kriti@adynamics.in">kriti@adynamics.in</a>
+                </span>
+              </p>
+
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
@@ -1825,8 +1989,6 @@
         </div>
       </div>
       <div class="footer_bg">
-        <div class="footer_bg_one"></div>
-        <div class="footer_bg_two"></div>
       </div>
     </div>
   </footer>
