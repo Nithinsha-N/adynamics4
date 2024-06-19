@@ -629,3 +629,34 @@ nav {
     height: 100vh;
   }
 }
+
+.form-classes{
+  width: 880px;
+  margin: 10vh auto;
+}
+
+@media (max-width: 992px){
+  #meFlyingHours {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  } 
+  #lookingFor{
+    margin-top: -2.3rem;
+  }  
+}
+@media (max-width: 576px){
+  #meFlyingHours{
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+  }
+  #lookingFor{
+    margin-top: 0rem;
+  }
+}  
+
+@media (max-width: 376px){
+  #meFlyingHours{
+    padding-top: 2.7rem;
+    height: auto;
+  }
+}

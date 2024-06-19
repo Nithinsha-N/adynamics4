@@ -182,12 +182,14 @@
         <h2 class="text-center mt-5" style="margin-bottom: -4rem !important; line-height: 2.2">
           Topics covered
         </h2>
-        <div class="row gy-5 gx-4 mx-auto">
-          <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s" style="
-                visibility: visible;
-                animation-delay: 0.1s;
-                animation-name: fadeIn;
-              ">
+        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s" style="
+              visibility: visible;
+              animation-delay: 0.1s;
+              animation-name: fadeIn;
+              margin: 5vh auto;
+              width: 100%;
+              max-width: 900px;
+            ">
             <div class="d-flex align-items-center mb-3 imPart-bg border-r8">
               <div class="flex-shrink-0 btn-square bg-primary me-3 border-r8">
                 <i class="fa fa-check text-white"></i>
@@ -312,7 +314,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s" style="
+          <div class="form-classes col-12 wow fadeInUp col-lg-6" data-wow-delay="0.2s" style="
                 visibility: visible;
                 animation-delay: 0.2s;
                 animation-name: fadeIn;
@@ -325,37 +327,61 @@
                 <div class="row g-3">
                   <div class="col-sm-6">
                     <div class="form-floating">
-                      <input type="text" class="form-control border-0 bg-white border-r8" id="gname"
-                        placeholder="Gurdian Name" />
-                      <label for="gname">Your Name</label>
+                      <input type="text" class="form-control border-0 bg-white border-r8" id="fname" 
+                      placeholder="First Name"/>
+                      <label for="fname">First Name</label>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-floating">
-                      <input type="email" class="form-control border-0 bg-white border-r8" id="gmail"
-                        placeholder="Gurdian Email" />
-                      <label for="gmail">Your Email</label>
+                      <input type="text" class="form-control border-0 bg-white border-r8" id="lname" 
+                      placeholder="Last Name"/>
+                      <label for="lname">Last Name</label>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-floating">
-                      <input type="text" class="form-control border-0 bg-white border-r8" id="cname"
-                        placeholder="Child Name" />
-                      <label for="cname">Courses Type</label>
+                      <input type="email" class="form-control border-0 bg-white border-r8" id="email"
+                        placeholder="Email" />
+                      <label for="email">Email</label>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-floating">
-                      <input type="text" class="form-control border-0 bg-white border-r8" id="cage"
-                        placeholder="Child Age" />
-                      <label for="cage">Car Type</label>
+                      <input type="tel" class="form-control border-0 bg-white border-r8" id="phno"
+                      placeholder="Phone No" />
+                      <label for="phno">Phone No</label>
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-sm-6">
                     <div class="form-floating">
-                      <textarea class="form-control border-0 bg-white border-r8" placeholder="Leave a message here"
-                        id="message" style="height: 100px"></textarea>
-                      <label for="message">Message</label>
+                      <select class="form-select border-0 bg-white border-r8" id="dgcaCpl" placeholder="Email">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                      <label for="dgcaCpl">Do you have a DGCA CPL?</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <select class="form-select border-0 bg-white border-r8" id="meFlyingHours">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                      <label for="meFlyingHours">Do you have more than 25hrs of ME flying?</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-floating">
+                      <select class="form-select border-0 bg-white border-r8" id="lookingFor">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="A">Pre Type Classes</option>
+                        <option value="B">Type Rating Slots</option>
+                        <option value="C">Both</option>
+                      </select>
+                      <label for="lookingFor">What are you looking for?</label>
                     </div>
                   </div>
                   <div class="col-12">
