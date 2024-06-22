@@ -57,3 +57,4 @@ function closeDemoClass(){
   $('#player').attr('src', '');
   $('#player').attr('src', source);
 }
+

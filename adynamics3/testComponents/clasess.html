@@ -16,6 +16,7 @@
   <!-- Icon Font Stylesheet -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" >
 
   <!-- Libraries Stylesheet -->
   <link href="../lib/animate/animate.min.css" rel="stylesheet" />
@@ -73,37 +74,33 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto p-4 p-lg-0">
-
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="../index.html" class="nav-item nav-link">Home</a>
-            <a href="../testComponents/about-hero.html" class="nav-item nav-link ">About</a>
-            <a href="..//testComponents/flying.html" class="nav-item nav-link">Flying</a>
-            <div class="dropdown">
-              <a href="..//testComponents/clasess.html" class="nav-item nav-link nav-dropdown active">Classes</a>
-              <div class="dropdown-menu">
-                <a href="../inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
-                <a href="../inidvidual-clases/dgcaground.html">DGCA Ground Classes</a>
-                <a href="../inidvidual-clases/RTR.html">Radio Telephony (RTR) Class</a>
-                <a href="../inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
-              </div>
-            </div>
-            <a href="../blog/homepageblog.html" class="nav-item nav-link">blog</a>
-          </div>
-          <div class="button-container">
-            <button class="button-enquiry" onclick="redirectEnquiry()">
-              <svg id="svgContainer" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56"
-                version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="start">
-                  <path
-                    d="M 54.4141 28 C 54.3906 25.2578 50.6639 23.2656 46.1874 23.2656 L 36.7421 23.2656 C 35.4296 23.2656 34.9374 23.0547 34.1640 22.1641 L 18.4140 4.9844 C 17.9218 4.4219 17.3124 4.1406 16.6093 4.1406 L 13.8905 4.1406 C 13.2812 4.1406 12.9296 4.6797 13.2343 5.3359 L 21.3437 23.2656 L 9.4374 24.6250 L 5.1952 16.8437 C 4.8905 16.2578 4.3749 16 3.6015 16 L 2.5937 16 C 1.9843 16 1.5859 16.3984 1.5859 17.0078 L 1.5859 38.9922 C 1.5859 39.6016 1.9843 39.9766 2.5937 39.9766 L 3.6015 39.9766 C 4.3749 39.9766 4.8905 39.7188 5.1952 39.1563 L 9.4374 31.3750 L 21.3437 32.7344 L 13.2343 50.6641 C 12.9296 51.2968 13.2812 51.8594 13.8905 51.8594 L 16.6093 51.8594 C 17.3124 51.8594 17.9218 51.5547 18.4140 51.0156 L 34.1640 33.8125 C 34.9374 32.9453 35.4296 32.7344 36.7421 32.7344 L 46.1874 32.7344 C 50.6639 32.7344 54.3906 30.7188 54.4141 28 Z" />
-                </g>
-              </svg>
-              <span id="enquiryText">ENQUIRY</span>
-            </button>
+        <a href="../index.html" class="nav-item nav-link">Home</a>
+        <a href="../testComponents/about-hero.html" class="nav-item nav-link ">About</a>
+        <a href="..//testComponents/flying.html" class="nav-item nav-link">Flying</a>
+        <div class="dropdown">
+          <a href="..//testComponents/clasess.html" class="nav-item nav-link nav-dropdown active">Classes</a>
+          <div class="dropdown-menu">
+            <a href="../inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
+            <a href="../inidvidual-clases/dgcaground.html">DGCA Ground Classes</a>
+            <a href="../inidvidual-clases/RTR.html">Radio Telephony (RTR) Class</a>
+            <a href="../inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
           </div>
         </div>
+        <a href="../blog/homepageblog.html" class="nav-item nav-link">blog</a>
+      </div>
+      <div class="button-container">
+        <button class="button-enquiry" onclick="redirectEnquiry()">
+          <svg id="svgContainer" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56"
+            version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="start">
+              <path
+                d="M 54.4141 28 C 54.3906 25.2578 50.6639 23.2656 46.1874 23.2656 L 36.7421 23.2656 C 35.4296 23.2656 34.9374 23.0547 34.1640 22.1641 L 18.4140 4.9844 C 17.9218 4.4219 17.3124 4.1406 16.6093 4.1406 L 13.8905 4.1406 C 13.2812 4.1406 12.9296 4.6797 13.2343 5.3359 L 21.3437 23.2656 L 9.4374 24.6250 L 5.1952 16.8437 C 4.8905 16.2578 4.3749 16 3.6015 16 L 2.5937 16 C 1.9843 16 1.5859 16.3984 1.5859 17.0078 L 1.5859 38.9922 C 1.5859 39.6016 1.9843 39.9766 2.5937 39.9766 L 3.6015 39.9766 C 4.3749 39.9766 4.8905 39.7188 5.1952 39.1563 L 9.4374 31.3750 L 21.3437 32.7344 L 13.2343 50.6641 C 12.9296 51.2968 13.2812 51.8594 13.8905 51.8594 L 16.6093 51.8594 C 17.3124 51.8594 17.9218 51.5547 18.4140 51.0156 L 34.1640 33.8125 C 34.9374 32.9453 35.4296 32.7344 36.7421 32.7344 L 46.1874 32.7344 C 50.6639 32.7344 54.3906 30.7188 54.4141 28 Z" />
+            </g>
+          </svg>
+          <span id="enquiryText">ENQUIRY</span>
+        </button>
+      </div>
+    </div>
   </nav>
   <!-- Navbar End -->
 
@@ -162,7 +159,8 @@
             <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
               <img class="img-fluid border-r10" src="../img/DGCACpl3.png" alt="" />
               <div class="courses-overlay">
-                <a class="btn btn-outline-primary border-2 courses-btn-bg" href="../inidvidual-clases/dgcaground.html">Read More</a>
+                <a class="btn btn-outline-primary border-2 courses-btn-bg"
+                  href="../inidvidual-clases/dgcaground.html">Read More</a>
               </div>
             </div>
           </div>
@@ -228,35 +226,37 @@
   </div>
   <!-- Courses End -->
   <!-- Footer Start -->
-  <!-- Footer Start -->
-  <footer class="new_footer_area bg_color">
+  <footer class="new_footer_area bg_color  ft_mar">
     <div class="new_footer_top">
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
               style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-              <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
-              <p>Don’t miss any updates of our new templates and extensions.!</p>
-              <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
-                <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
-                <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
-                <p class="mchimp-errmessage" style="display: none;"></p>
-                <p class="mchimp-sucmessage" style="display: none;"></p>
-              </form>
+              <h3 class="f-title f_600 t_color f_size_18">Contact</h3>
+              <p><i class="fa fa-map-marker-alt me-2"></i>Bengaluru, Karnataka </p>
+              <p><i class="fa-solid fa-phone me-2"></i>+91-8296076136 </p>
+              <p style="display:flex;">
+                <i class="fa-solid fa-envelope me-2" style="padding-top:6px;"></i>
+                <span>
+                <a href="mailto:himanshu@adynamics.in">himanshu@adynamics.in</a>
+                <a href="mailto:kriti@adynamics.in">kriti@adynamics.in</a>
+                </span>
+              </p>
+
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
               style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-              <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+              <h3 class="f-title f_600 t_color f_size_18">Courses</h3>
               <ul class="list-unstyled f_list">
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Android App</a></li>
-                <li><a href="#">ios App</a></li>
-                <li><a href="#">Desktop</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">My tasks</a></li>
+                <li><a href="#">A320 Pre Type Rating Class</a></li>
+                <li><a href="#">DGCA Ground Classes</a></li>
+                <li><a href="#">Radio Telephony (RTR) Class</a></li>
+                <li><a href="#">NIOS Prep Class</a></li>
+                <li><a href="#">cpl conversion</a></li>
+                <li><a href="#">sacAA CPL</a></li>
               </ul>
             </div>
           </div>
@@ -265,12 +265,12 @@
               style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
               <h3 class="f-title f_600 t_color f_size_18">Help</h3>
               <ul class="list-unstyled f_list">
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Term &amp; conditions</a></li>
-                <li><a href="#">Reporting</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Support Policy</a></li>
-                <li><a href="#">Privacy</a></li>
+                <li><a href="./testComponents/about-hero.html">About us</a></li>
+                <li><a href="#testi">Testimonial</a></li>
+                <li><a href="#teamm">Team</a></li>
+                <li><a href="#demo">Demo Vedio</a></li>
+                <li><a href="./testComponents/about-hero.html">Contact</a></li>
+                <li><a href="./testComponents/clasess.html">Training</a></li>
               </ul>
             </div>
           </div>
@@ -289,12 +289,10 @@
         </div>
       </div>
       <div class="footer_bg">
-        <div class="footer_bg_one"></div>
-        <div class="footer_bg_two"></div>
       </div>
     </div>
-
   </footer>
+
   <!-- Footer End -->
 
   <!-- Copyright End -->

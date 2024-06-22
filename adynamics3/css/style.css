@@ -427,7 +427,7 @@ nav {
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid #49aaaa; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+  white-space: nowrap; 
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.10em; /* Adjust as needed */
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
@@ -536,10 +536,10 @@ nav {
   .hero{
     width: 100%;
 
-    .hero-title{
+    /* .hero-title{
       font-size: 1rem;
     
-    }
+    } */
   }
 
   .hero .hero-content{
@@ -548,7 +548,6 @@ nav {
 
   body{
     font-size: 0.8rem;
-    padding: 0.5rem;
   }
 }
 
@@ -560,9 +559,9 @@ nav {
   .hero{
     width: 100%;
 
-    .hero-title{
+    /* .hero-title{
       font-size: 1rem;
-    }
+    } */
   }
 
   .hero .hero-content{
@@ -578,7 +577,7 @@ nav {
 .demo-class{
   display: none;
   z-index: 99999;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -628,5 +627,36 @@ nav {
 @media screen and (orientation: landscape) {
   .carousel img {
     height: 100vh;
+  }
+}
+
+.form-classes{
+  width: 880px;
+  margin: 10vh auto;
+}
+
+@media (max-width: 992px){
+  #meFlyingHours {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  } 
+  #lookingFor{
+    margin-top: -2.3rem;
+  }  
+}
+@media (max-width: 576px){
+  #meFlyingHours{
+    padding-top: 1.625rem;
+    padding-bottom: 0.625rem;
+  }
+  #lookingFor{
+    margin-top: 0rem;
+  }
+}  
+
+@media (max-width: 376px){
+  #meFlyingHours{
+    padding-top: 2.7rem;
+    height: auto;
   }
 }

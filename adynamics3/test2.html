@@ -2,247 +2,112 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>ADYNAMICS</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="" name="keywords" />
-  <meta content="" name="description" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Favicon -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="./css/style.css" rel="stylesheet" />
   <link href="./img/adynamicsLogo.png" rel="icon" />
-
-  <!-- Google Web Fonts -->
+  <link rel="stylesheet" href="./css2/style.css">
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Icon Font Stylesheet -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-
-  <!-- Libraries Stylesheet -->
-  <link href="./lib/animate/animate.min.css" rel="stylesheet" />
-  <link href="./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-
-  <!-- Customized Bootstrap Stylesheet -->
-  <link href="./css/bootstrap.min.css" rel="stylesheet" />
-  <script>
-    document.getElementsByTagName("html")[0].className += " js";
-  </script>
-
-  <!-- Template Stylesheet -->
-  <link href="./css/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./css2/style.css" />
-  <link rel="stylesheet" href="./scss/follower.scss" />
-  <link rel="stylesheet" href="./scss/bootstrap/scss/_carousel.scss" />
-  <link rel="stylesheet" href="./check.css" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
-    .list {
-      position: relative;
-    }
 
-    .list h2 {
-      color: #fff;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
 
-    .list ul {
-      position: relative;
-    }
+    .hero-container {
+      display: flex;
+      flex-wrap: wrap;
 
-    .list ul li {
-      position: relative;
-      left: 0;
-      color: #fce4ec;
-      list-style: none;
-      margin: 4px 0;
-      border-left: 2px solid #49aaaa;
-      transition: 0.5s;
-      cursor: pointer;
-    }
-
-    .list ul li:hover {
-      left: 10px;
-    }
-
-    .list ul li span {
-      position: relative;
-      padding: 8px;
-      padding-left: 12px;
-      display: inline-block;
+      overflow: hidden;
+      justify-content: center;
+      background-color: #46aaaa87;
+      padding-top: 5rem;
+      color: #333;
+      font: 100% Arial, Sans Serif;
       z-index: 1;
-      transition: 0.5s;
-    }
-
-    .list ul li:hover span {
-      color: #111;
-    }
-
-    .list ul li:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: #49aaaa;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: 0.5s;
-    }
-
-    .list ul li:hover:before {
-      transform: scaleX(0.5);
-    }
-
-    .hori-timeline .events {
-      border-top: 3px solid #e9ecef;
-    }
-
-    .hori-timeline .events .event-list {
-      display: block;
       position: relative;
-      text-align: center;
-      padding-top: 70px;
-      margin-right: 0;
+      height: 80vh;
     }
 
-    .hori-timeline .events .event-list:before {
-      content: "";
-      position: absolute;
-      height: 36px;
-      border-right: 2px dashed #dee2e6;
-      top: 0;
+    .content-wrapper {
+      margin: auto 0;
+
+      width: 60%;
     }
 
-    .hori-timeline .events .event-list .event-date {
-      position: absolute;
-      top: 38px;
-      left: 0;
-      right: 0;
-      width: 75px;
-      margin: 0 auto;
-      border-radius: 4px;
-      padding: 2px 4px;
+    .content-wrapper .title{
+      font-size: 5vw;
+      font-family: monospace;
+      color: #49aaaa;
     }
 
-    @media (min-width: 1140px) {
-      .hori-timeline .events .event-list {
-        display: block;
-        position: relative;
-        text-align: center;
-        padding-top: 70px;
-        margin-right: 0;
+    .content-wrapper .sub-title{
+      font-size: 1.1rem;
+      font-weight: 300;
+      width:90%;
+      margin-top: 1em;
+      color: #f1f1f1;
+    }
+
+    .img-wrapper {
+      width: 30%;
+    }
+
+    .img-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 45%;
+    }
+
+    .fade-in-right {
+      animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+
+
+
+    .typewriter h1 {
+      font-size: 2.5vw;
+    }
+
+    @keyframes fade-in-right {
+      0% {
+        transform: translateX(50px);
+        opacity: 0;
       }
 
-      .hori-timeline .events .event-list:before {
-        content: "";
-        position: absolute;
-        height: 36px;
-        border-right: 2px dashed #dee2e6;
-        top: 0;
-      }
-
-      .hori-timeline .events .event-list .event-date {
-        position: absolute;
-        top: 38px;
-        left: 0;
-        right: 0;
-        width: 75px;
-        margin: 0 auto;
-        border-radius: 4px;
-        padding: 2px 4px;
-      }
-
-      @media (min-width: 1140px) {
-        .hori-timeline .events .event-list {
-          display: inline-block;
-          width: 40%;
-          padding-top: 45px;
-        }
-
-        .hori-timeline .events .event-list .event-date {
-          top: -12px;
-        }
-      }
-
-      .bg-soft-primary {
-        background-color: rgba(64, 144, 203, 0.3) !important;
-      }
-
-      .bg-soft-success {
-        background-color: rgba(71, 189, 154, 0.3) !important;
-      }
-
-      .bg-soft-danger {
-        background-color: rgba(231, 76, 94, 0.3) !important;
-      }
-
-      .bg-soft-warning {
-        background-color: rgba(249, 213, 112, 0.3) !important;
-      }
-
-      .card {
-        border: none;
-        margin-bottom: 24px;
-        -webkit-box-shadow: 0 0 13px 0 rgba(236, 236, 241, 0.44);
-        box-shadow: 0 0 13px 0 rgba(236, 236, 241, 0.44);
+      100% {
+        transform: translateX(0);
+        opacity: 1;
       }
     }
 
-    @media (max-width: 480px) {
-      .mar {
-        margin-left: -90px;
-      }
 
-      .marr {
-        margin-left: -43px;
+
+    @media (max-width: 768px) {
+      .hero-container{
+        flex-direction: column;
+        align-items: center;
+      }
+      .typewriter h1 {
+        font-size: 1rem;
+      }
+      .content-wrapper {
+        width: 90%;
+      }
+      .img-wrapper {
+        width: 70%;
       }
     }
   </style>
+
+
 </head>
 
 <body>
-  <!-- Spinner Start -->
-  <div id="spinner"
-    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-grow text-primary" role="status"></div>
-  </div>
 
-  <!-- Spinner End -->
-  <!-- Topbar Start -->
-  <div class="container-fluid bg-dark text-light p-0">
-    <div class="row gx-0 d-none d-lg-flex">
-      <div class="col-lg-7 px-5 text-start">
-        <div class="h-100 d-inline-flex align-items-center me-4">
-          <small class="fa fa-map-marker-alt text-primary me-2"></small>
-          <small>Bengaluru, Karnataka 560048</small>
-        </div>
-        <div class="h-100 d-inline-flex align-items-center">
-          <small class="far fa-clock text-primary me-2"></small>
-          <small>info@adynamics.in </small>
-        </div>
-      </div>
-      <div class="col-lg-5 px-5 text-end">
-        <div class="h-100 d-inline-flex align-items-center me-4">
-          <small class="fa fa-phone-alt text-primary me-2"></small>
-          <small>+91-8296076136</small>
-        </div>
-        <div class="h-100 d-inline-flex align-items-center mx-n2">
-          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-              class="fab fa-facebook-f" style="font-size: 20px; color: #fff"></i></a>
-          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-              class="fab fa-twitter" style="font-size: 20px"></i></a>
-          <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i
-              class="fab fa-linkedin-in" style="font-size: 20px; color: #fff"></i></a>
-          <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Topbar End -->
 
   <!-- Navbar Start -->
   <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
@@ -255,7 +120,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="./index.html" class="nav-item nav-link active">Home</a>
-        <a href="./testComponents/about-hero.html" class="nav-item nav-link">About</a>
+        <a href="./testComponents/about-hero.html" class="nav-item nav-link ">About</a>
         <a href="./testComponents/flying.html" class="nav-item nav-link">Flying</a>
         <div class="dropdown">
           <a href="./testComponents/clasess.html" class="nav-item nav-link nav-dropdown">Classes</a>
@@ -266,7 +131,7 @@
             <a href="./inidvidual-clases/niosclasses.html">NIOS Prep Class</a>
           </div>
         </div>
-        <a href="./blog/homepageblog.html" class="nav-item nav-link">blog</a>
+        <a href="./blog/homepageblog.html" class="nav-item nav-link ">blog</a>
       </div>
       <div class="button-container">
         <button class="button-enquiry" onclick="redirectEnquiry()">
@@ -283,116 +148,62 @@
     </div>
   </nav>
   <!-- Navbar End -->
+  
 
   <!--- #HERO --->
-  <!-- <section class="section hero" id="home" aria-label="hero">
-    <div class="container bottom-height" style=" padding-right: 0px;">
-
-      <div class="hero-content">
-
-        <p class="hero-subtitle has-before ">Welcome to ADynamics</p>
-
-        <div class="typewriter">
-          <h1 class="h1 hero-title">Ready to Awaken the Aviator in You?</h1>
-        </div>
-
-        <p class=" hero-text" style="font-size: 1rem;">
-          Elevate your pilot journey with ADynamics – where a comprehensive curriculum, experienced instructors, and
-          global partnerships converge. From in-depth training to seamless career support, we're your catalyst for
-          aviation success.
-        </p>
-
-        <div class="btn-group">
-          <a href="#" class="btn btn-primary" style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
-            More</a>
-
-          <button class="flex-btn" onclick="playDemoClass()">
-            <div class="btn-icon" style="background-color: #49aaaa;">
-              <ion-icon name="play" aria-hidden="true"></ion-icon>
-            </div>
-
-            <span class="span" style="color: #49aaaa;">Demo Class</span>
-          </button>
-        </div>
-
-      </div>
-
-
-
-      <figure class="has-before hero-banner che" style="--width: 1050; --height: 1050;  padding: 0px;">
-        <img src="./img/check.JPG" width="400px" height="100px" alt="hero banner" class="img-cover  hero-banner resize"
-          style="border-radius: 50%; width: 100%;  ">
-      </figure>
-
-
-
-
-
-
-
-
-
-    </div>
-  </section> -->
   <section class="hero-container">
     <div id="background-wrap">
       <div class="x1">
-        <div class="cloud"></div>
+          <div class="cloud"></div>
       </div>
-
+  
       <div class="x2">
-        <div class="cloud"></div>
+          <div class="cloud"></div>
       </div>
-
+  
       <div class="x3">
-        <div class="cloud"></div>
+          <div class="cloud"></div>
       </div>
-
+  
       <div class="x4">
-        <div class="cloud"></div>
+          <div class="cloud"></div>
+      </div>
+  
+      <div class="x5">
+          <div class="cloud"></div>
       </div>
     </div>
     <div class="content-wrapper">
-      <div class="demo-class">
-        <iframe src="https://www.youtube.com/embed/lKr-EdxFhnM?si=rVfbLDS_tgJVAEvE" id="player"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <button class="close-demo-class" onclick="closeDemoClass()">
-          <i class="fa fa-times"></i>
-        </button>
-      </div>
-      <p class="hero-subtitle">Welcome to ADynamics</p>
+      <p class="title">Welcome to ADynamics</p>
       <div class="typewriter">
         <h1 class="h1 hero-title">Ready to Awaken the Aviator in You?</h1>
       </div>
-      <p style="font-size: 1rem; color: black; width: 90%">
-        Elevate your pilot journey with ADynamics – where a comprehensive
-        curriculum, experienced instructors, and global partnerships converge.
-        From in-depth training to seamless career support, we're your catalyst
-        for aviation success.
+      <p class="sub-title">
+        Elevate your pilot journey with ADynamics – where a comprehensive curriculum, experienced instructors, and
+        global partnerships converge. From in-depth training to seamless career support, we're your catalyst for
+        aviation success.
       </p>
       <div class="btn-group">
-        <a href="#" class="btn btn-primary" style="border-end-end-radius: 50px; background-color: #49aaaa">Discover
+        <a href="#" class="btn btn-primary" style="border-end-end-radius: 50px; background-color: #49aaaa;">Discover
           More</a>
 
         <button class="flex-btn" onclick="playDemoClass()">
-          <div class="btn-icon" style="background-color: #49aaaa">
+          <div class="btn-icon" style="background-color: #49aaaa;">
             <ion-icon name="play" aria-hidden="true"></ion-icon>
           </div>
 
-          <span class="span" style="color: #49aaaa">Demo Class</span>
+          <span class="span" style="color: #49aaaa;">Demo Class</span>
         </button>
       </div>
     </div>
     <div class="img-wrapper">
-      <img class="fade-in-right" src="./img/HeroBanner.png" />
+      <img class="fade-in-right" src="./img/banner2.png">
     </div>
+    
   </section>
 
   <!-- Hero-section End -->
 
-  <!-- Facts Start -->
   <div class="container-fluid d-none d-xl-block facts py-4 pt-lg-4">
     <div class="container py-5 pt-lg-0">
       <div class="row gx-2 gy-2">
@@ -529,7 +340,7 @@
                   <p>Step 1</p>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -555,7 +366,7 @@
                   <p>Step 2</p>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -583,7 +394,7 @@
                   <p>Step 3</p>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -611,7 +422,7 @@
                   <p>Step 4</p>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -639,7 +450,7 @@
                   <p>Step 5</p>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -667,7 +478,7 @@
                   <p>Step 6</p>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -700,7 +511,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -727,7 +538,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -816,7 +627,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -841,7 +652,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -875,7 +686,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-12">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -930,7 +741,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-12">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -973,7 +784,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-12">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1011,7 +822,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-12">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1049,7 +860,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-12">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1094,7 +905,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1121,7 +932,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1204,7 +1015,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1231,7 +1042,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1259,7 +1070,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-12">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1318,7 +1129,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1346,7 +1157,7 @@
                       animation-name: fadeInLeft;
                     "></div>
                 <div class="row">
-                  <div class="col-12 col-md-10 col-lg-10">
+                  <div class="col-12 col-md-10 col-lg-8">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="
                           visibility: visible;
                           animation-delay: 0.3s;
@@ -1422,599 +1233,12 @@
     </div>
     <!-- .cd-h-timeline__events -->
   </section>
-  <!-- end time line -->
 
-  <!-- end time line -->
-
-  <!-- Courses Start -->
-  <div class="container-xxl my-4 my-xl-6 py-6 pb-0" style="background-color: #f0f2f4c3">
-    <div class="container">
-      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px">
-        <h6 class="text-primary text-uppercase mb-2">Trending Courses</h6>
-        <h1 class="display-6 mb-4">
-          Embark on a transformative journey with our training program
-        </h1>
-      </div>
-      <div class="row g-4 justify-content-start">
-        <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
-            <div class="text-center p-4">
-              <h5 class="mb-3 mt-2 mt-xl-1">DGCA Ground Classes</h5>
-              <p>
-                Dive deep into theoretical concepts, building a strong
-                foundation to ace DGCA Ground tests.
-              </p>
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-signal text-primary me-2"></i>Beginner
-                </li>
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-calendar-alt text-primary me-2"></i>3 Week
-                </li>
-              </ol>
-            </div>
-            <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-              <img class="img-fluid border-r10" src="./img/DgcaCpl.png" alt="" />
-              <div class="courses-overlay">
-                <a class="btn btn-outline-primary border-2 courses-btn-bg"
-                  href="./inidvidual-clases/dgcaground.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
-            <div class="text-center p-4">
-              <h5 class="mb-3 mt-2 mt-xl-1">Radio Telephony (RTR) Class</h5>
-              <p>
-                This training is crucial for effective interaction between
-                aircraft and air traffic control.
-              </p>
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-signal text-primary me-2"></i>Beginner
-                </li>
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-calendar-alt text-primary me-2"></i>3 Week
-                </li>
-              </ol>
-            </div>
-            <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-              <img class="img-fluid border-r10" src="./img/pilot_pitcure.png" alt="" />
-              <div class="courses-overlay">
-                <a class="btn btn-outline-primary border-2 courses-btn-bg" href="./inidvidual-clases/RTR.html">Read
-                  More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
-            <div class="text-center p-4">
-              <h5 class="mb-3 mt-2 mt-xl-1">NIOS Prep Class</h5>
-              <p>
-                Supporting Non-Science Students to clear exams equivalent to
-                Class 12 Maths and Physics.
-              </p>
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-signal text-primary me-2"></i>Beginner
-                </li>
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-calendar-alt text-primary me-2"></i>3 Week
-                </li>
-              </ol>
-            </div>
-            <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-              <img class="img-fluid border-r10" src="./img/nios-prepclasses.png" alt="" />
-              <div class="courses-overlay">
-                <a class="btn btn-outline-primary border-2 courses-btn-bg"
-                  href="./inidvidual-clases/niosclasses.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
-            <div class="text-center p-4">
-              <h5 class="mb-3 mt-2 mt-xl-1">
-                Navigating Global Flight school Partnerships
-              </h5>
-              <p>
-                Unlock global opportunities while we guide you through student
-                loans, visa procedures, and more
-              </p>
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-signal text-primary me-2"></i>Beginner
-                </li>
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-calendar-alt text-primary me-2"></i>3 Week
-                </li>
-              </ol>
-            </div>
-            <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-              <img class="img-fluid border-r10" src="./img/pilot_pitcure.png" alt="" />
-              <div class="courses-overlay">
-                <a class="btn btn-outline-primary border-2 courses-btn-bg"
-                  href="./inidvidual-clases/pretyping.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-xxl-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="courses-item d-flex flex-column flex-xxl-row arc-shadow overflow-hidden h-100">
-            <div class="text-center p-4">
-              <h5 class="mb-3 mt-2 mt-xl-1">
-                Pre Type Rating and Type Rating Programs
-              </h5>
-              <p>
-                Prepare for getting Type rated with our Pre-Type Rating Class
-                and leverage our partnerships with global TRTOs.
-              </p>
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-signal text-primary me-2"></i>Beginner
-                </li>
-                <li class="breadcrumb-item small">
-                  <i class="fa fa-calendar-alt text-primary me-2"></i>3 Week
-                </li>
-              </ol>
-            </div>
-            <div class="position-relative mt-auto p-4 pt-0 pt-lg-4">
-              <img class="img-fluid border-r10" src="./img/cource1.png" alt="" />
-              <div class="courses-overlay">
-                <a class="btn btn-outline-primary border-2 courses-btn-bg"
-                  href="./inidvidual-clases/pretyping.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section class="Features">
-    <div class="container-xxl py-6">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="text-primary text-uppercase mb-2">Why Choose Us!</h6>
-            <h1 class="display-6 mb-4">
-              Flight to Excellence: ADynamics - Your Gateway to Certified
-              Pilot Training.
-            </h1>
-            <p class="mb-5">
-              Soar higher with ADynamics, where we provide tailored pilot
-              training and unwavering support to help you thrive in the
-              aviation industry. Join us to unlock your full potential and
-              take your career to new heights.
-            </p>
-            <div class="row gy-5 gx-4">
-              <div class="col-sm-6 wow fadeIn px-2" data-wow-delay="0.1s">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="flex-shrink-0 btn-square bg-primary me-3 border-r8">
-                    <i class="fa fa-check text-white"></i>
-                  </div>
-                  <h5 class="mb-0">Skilled Instructors</h5>
-                </div>
-                <span>Get personalized guidance from experienced flight
-                  instructors.
-                </span>
-              </div>
-              <div class="col-sm-6 wow fadeIn px-2" data-wow-delay="0.2s">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="flex-shrink-0 btn-square bg-primary me-3 border-r8">
-                    <i class="fa fa-check text-white"></i>
-                  </div>
-                  <h5 class="mb-0">Comprehensive Support</h5>
-                </div>
-                <span>We offer a complete hand holding through all stages of your
-                  pilot journey.
-                </span>
-              </div>
-              <div class="col-sm-6 wow fadeIn px-2" data-wow-delay="0.3s">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="flex-shrink-0 btn-square bg-primary me-3 border-r8">
-                    <i class="fa fa-check text-white"></i>
-                  </div>
-                  <h5 class="mb-0">DGCA-Compliant Training</h5>
-                </div>
-                <span>
-                  Our programs are tailored to meet DGCA standards, ensuring a
-                  smooth transition.</span>
-              </div>
-              <div class="col-sm-6 wow fadeIn px-2" data-wow-delay="0.4s">
-                <div class="d-flex align-items-center mb-3">
-                  <div class="flex-shrink-0 btn-square bg-primary me-3 border-r8">
-                    <i class="fa fa-check text-white"></i>
-                  </div>
-                  <h5 class="mb-0">Affordable Options</h5>
-                </div>
-                <span>Benefit from cost-effective packages and partnerships,
-                  saving you money.
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow d-none d-lg-flex fadeInUp" data-wow-delay="0.5s">
-            <div
-              class="position-relative overflow-hidden h-100 border-r10 d-none d-lg-flex w-100 mt-5 features-side-imgSection">
-              <img src="./img/pilots.jpg" alt="" class="features-side-img" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Features End -->
-
-  <!-- demo-class start -->
-  <section class="demo-class-section imSection-bg" id="demo">
-    <div class="container-xxl py-6 px-lg-5">
-      <div class="demo-class-card mx-auto flex flex-column flex-xl-row border-r8 py-3 py-xl-4 arc-shadow">
-        <div class="demo-class-textarea text-xl-start text-center px-3 px-sm-4 px-sm-5 py-3">
-          <h2 class="fs-2 display-6 py-4 pb-3">
-            Experience ADynamics' Demo Class – Your Gateway to Pilot Training
-            Excellence!
-          </h2>
-          <p class="mb-5 mb-md-4">
-            Take the first step towards your aviation dreams with a Free Demo
-            Class at ADynamics!
-          </p>
-          <button class="demo-class-joinBtn btn mb-5 fs-6 px-4 py-3 border-r8">
-            Join Our Demo class
-          </button>
-        </div>
-        <div class="demo-class-imgarea d-flex justify-content-center py-4 pt-0 py-xl-0">
-          <div class="d-flex justify-content-center justify-content-xl-start demo-class-imgWrapper">
-            <img loading="lazy" decoding="async" width="799" height="449" src="./img/thumbnail.png"
-              class="demo-class-videoImg" alt="" srcset="
-                  ./img/thumbnail.png 799w,
-                  ./img/thumbnail.png 300w,
-                  ./img/thumbnail.png 768w
-                " sizes="(max-width: 799px) 100vw, 799px" />
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                <g id="Group_205" data-name="Group 205" transform="translate(-1462 -4918)">
-                  <circle id="Ellipse_12" data-name="Ellipse 12" cx="25" cy="25" r="25" transform="translate(1462 4918)"
-                    fill="#fff"></circle>
-                  <path id="play-svgrepo-com"
-                    d="M8.286,3.407A1.5,1.5,0,0,0,6,4.684V19.316a1.5,1.5,0,0,0,2.286,1.277l11.888-7.316a1.5,1.5,0,0,0,0-2.555Z"
-                    transform="translate(1475.556 4931)" fill="#49aaaa"></path>
-                </g>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- demo-class end -->
-
-  <!-- Testimonial Start -->
-  <section class="testimonial" id="testi">
-    <div class="container-xxl py-6">
-      <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
-          <h6 class="text-primary text-uppercase mb-2">Testimonial</h6>
-          <h1 class="display-6 mb-4">What Our Students Say!</h1>
-        </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row justify-content-center testimonia-bg py-5 personal">
-                <div class="col-lg-7 personail" data-wow-delay="0.1s">
-                  <div class="employee_name">
-                    <h5>Dhruv</h5>
-                    <span>Profession</span>
-                  </div>
-                  <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Temporibus voluptatem, quos, quae, quidem, doloremque quia
-                    pariatur harum ea amet quibusdam quisquam, quae,
-                    temporibus dolores porro doloribus."
-                  </p>
-                </div>
-                <div class="col-lg-5" data-wow-delay="0.3s">
-                  <video muted controls loop>
-                    <source src="/adynamics3/assets/video/adynamics final draft.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row justify-content-center testimonia-bg py-5 personal">
-                <div class="col-lg-7 personail" data-wow-delay="0.1s">
-                  <div class="employee_name">
-                    <h5>Ajesh</h5>
-                    <span>Profession</span>
-                  </div>
-                  <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Temporibus voluptatem, quos, quae, quidem, doloremque quia
-                    pariatur harum ea amet quibusdam quisquam, quae,
-                    temporibus dolores porro doloribus."
-                  </p>
-                </div>
-                <div class="col-lg-5" data-wow-delay="0.3s">
-                  <video muted controls loop>
-                    <source src="/adynamics3/assets/video/adynamic ajeesh vid.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Testimonial End -->
-
-  <!-- Team Start -->
-  <!-- <div class="container-xxl pt-5 py-6 pt-lg-6" id="teamm">
-    <div class="container">
-      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px">
-        <h6 class="text-primary text-uppercase mb-2">Meet The Team</h6>
-        <h1 class="display-6 mb-4">We Have Great Experience Of Driving</h1>
-      </div>
-      <div class="row g-0 team-items d-flex justify-content-center d-none d-md-flex">
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="team-item position-relative mx-1">
-            <img class="img-fluid w-50 team-item-img" src="img/team-1.jpg" style="margin-left: auto; margin-right: auto"
-              alt="" />
-
-            <div class="text-center p-4 pt-2">
-              <h5 class="mt-2">Himanshu Dayalan</h5>
-              <span>Instructor</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="team-item position-relative mx-1">
-            <img class="img-fluid w-50 team-item-img" src="img/team-2.jpg" style="margin-left: auto; margin-right: auto"
-              alt="" />
-            <div class="text-center p-4 pt-2">
-              <h5 class="mt-2">Ankita Halalli</h5>
-              <span>Instructor</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-          <div class="team-item position-relative mx-1">
-            <img class="img-fluid w-50 team-item-img" src="img/team-3.jpg" style="margin-left: auto; margin-right: auto"
-              alt="" />
-
-            <div class="text-center p-4 pt-2">
-              <h5 class="mt-2">Kirti Ahuja</h5>
-              <span>Instructor</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-          <div class="team-item position-relative mx-1">
-            <img class="img-fluid w-50 team-item-img" src="img/team-4.jpg" style="margin-left: auto; margin-right: auto"
-              ; alt="" />
-
-            <div class="text-center p-4 pt-2">
-              <h5 class="mt-2">Ananya Jain</h5>
-              <span>Instructor</span>
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Team Testimonial Start mobile-->
-      <!-- <div class="row justify-content-center d-md-none">
-        <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-          <div class="owl-carousel testimonial-carousel">
-            <div class="testimonial-item text-center">
-              <div class="position-relative mb-4 team-item-carousel">
-                <img class="img-fluid mx-auto team-item-img" src="img/team-1.jpg" alt="" />
-                <div class="team-social text-center">
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-facebook-f"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-
-              <h5>Client Name</h5>
-              <span>Profession</span>
-            </div>
-            <div class="testimonial-item text-center">
-              <div class="position-relative mb-4 team-item-carousel">
-                <img class="img-fluid mx-auto team-item-img" src="img/team-2.jpg" alt="" />
-                <div class="team-social text-center">
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-facebook-f"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-
-              <h5>Client Name</h5>
-              <span>Profession</span>
-            </div>
-            <div class="testimonial-item text-center">
-              <div class="position-relative mb-4 team-item-carousel">
-                <img class="img-fluid mx-auto team-item-img" src="img/team-3.jpg" alt="" />
-                <div class="team-social text-center">
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-facebook-f"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-
-              <h5>Client Name</h5>
-              <span>Profession</span>
-            </div>
-            <div class="testimonial-item text-center">
-              <div class="position-relative mb-4 team-item-carousel">
-                <img class="img-fluid mx-auto team-item-img" src="img/team-4.jpg" alt="" />
-                <div class="team-social text-center">
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-facebook-f"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i class="fab fa-twitter"></i></a>
-                  <a class="btn btn-square btn-outline-primary border-2 m-1" href=""><i
-                      class="fab fa-instagram"></i></a>
-                </div>
-              </div>
-
-              <h5>Client Name</h5>
-              <span>Profession</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- Team  End -->
-
-  <!-- Footer Start -->
-  <footer class="new_footer_area bg_color ft_mar">
-    <div class="new_footer_top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="
-                  visibility: visible;
-                  animation-delay: 0.2s;
-                  animation-name: fadeInLeft;
-                ">
-              <h3 class="f-title f_600 t_color f_size_18">Contact</h3>
-              <p>
-                <i class="fa fa-map-marker-alt me-2"></i>Bengaluru, Karnataka
-              </p>
-              <p><i class="fa-solid fa-phone me-2"></i>+91-8296076136</p>
-              <p style="display: flex">
-                <i class="fa-solid fa-envelope me-2" style="padding-top: 6px"></i>
-                <span>
-                  <a href="mailto:himanshu@adynamics.in">himanshu@adynamics.in</a>
-                  <a href="mailto:kriti@adynamics.in">kriti@adynamics.in</a>
-                </span>
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="
-                  visibility: visible;
-                  animation-delay: 0.4s;
-                  animation-name: fadeInLeft;
-                ">
-              <h3 class="f-title f_600 t_color f_size_18">Courses</h3>
-              <ul class="list-unstyled f_list">
-                <li><a href="#">A320 Pre Type Rating Class</a></li>
-                <li><a href="#">DGCA Ground Classes</a></li>
-                <li><a href="#">Radio Telephony (RTR) Class</a></li>
-                <li><a href="#">NIOS Prep Class</a></li>
-                <li><a href="#">cpl conversion</a></li>
-                <li><a href="#">sacAA CPL</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="
-                  visibility: visible;
-                  animation-delay: 0.6s;
-                  animation-name: fadeInLeft;
-                ">
-              <h3 class="f-title f_600 t_color f_size_18">Help</h3>
-              <ul class="list-unstyled f_list">
-                <li>
-                  <a href="./testComponents/about-hero.html">About us</a>
-                </li>
-                <li><a href="#testi">Testimonial</a></li>
-                <li><a href="#teamm">Team</a></li>
-                <li><a href="#demo">Demo Vedio</a></li>
-                <li>
-                  <a href="./testComponents/about-hero.html">Contact</a>
-                </li>
-                <li><a href="./testComponents/clasess.html">Training</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="
-                  visibility: visible;
-                  animation-delay: 0.8s;
-                  animation-name: fadeInLeft;
-                ">
-              <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
-              <div class="f_social_icon">
-                <a href="#" class="fab fa-facebook"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-                <a href="#" class="fab fa-pinterest"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer_bg"></div>
-    </div>
+  <footer>
+    <img src="s.png" alt="Footer Image" class="footer-image">
   </footer>
 
-  <!-- Footer End -->
 
-  <!-- Copyright Start -->
-
-  <!-- Copyright End -->
-
-  <!-- Back to Top -->
-  <a href="" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="background-color: #49aaaa"><i
-      class="bi bi-whatsapp"></i></a>
-
-  <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
-  <script src="assets/js/util.js"></script>
-  <!-- util functions included in the CodyHouse framework -->
-  <script src="assets/js/swipe-content.js"></script>
-  <!-- A Vanilla JavaScript plugin to detect touch interactions -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/follower.js"></script>
 </body>
 
 </html>
