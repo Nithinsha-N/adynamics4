@@ -279,4 +279,23 @@
 	  window.dispatchEvent(event);
 	}
   })();
+
+function redirectEnquiry(){
+	window.location.href = "../../adynamics3/enquiry.html";
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var videos = document.querySelectorAll('video');
+
+  videos.forEach(function (video) {
+	  video.addEventListener('play', function () {
+		  // Pause all other videos
+		  videos.forEach(function (otherVideo) {
+			  if (otherVideo !== video && !otherVideo.paused) {
+				  otherVideo.pause();
+			  }
+		  });
+	  });
+  });
+});
   

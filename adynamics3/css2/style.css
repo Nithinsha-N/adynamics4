@@ -1488,6 +1488,17 @@ body {
   }
 }
 
+@keyframes animateCloud2 {
+  0% {
+    margin-left: -500px;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+
+
 .x1 {
   -webkit-animation: animateCloud 35s linear infinite;
   -moz-animation: animateCloud 35s linear infinite;
@@ -1526,6 +1537,22 @@ body {
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
   transform: scale(0.4);
+}
+
+@media (max-width: 575px) {
+  .x1{
+    animation: animateCloud2 35s linear infinite;
+  }
+  .x2{
+    animation: animateCloud2 20s linear infinite;
+  }
+  .x3{
+    animation: animateCloud2 30s linear infinite;
+  }
+  .x4{
+    animation: animateCloud2 18s linear infinite;
+  }
+
 }
 
 
