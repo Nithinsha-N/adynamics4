@@ -1645,27 +1645,27 @@ body {
 
 .img-wrapper img {
   width: 100%;
-}
-
-.fade-in-right {
-  animation: fade-in-right 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  filter: drop-shadow(13px 15px 2px rgb(0 0 0 / 0.4));
+  z-index: 999;
 }
 
 .typewriter h1 {
   font-size: 2.5vw;
 }
 
-@keyframes fade-in-right {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
+.slide-in-tr {
+  animation: slide-in-tr 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
+@keyframes slide-in-tr {
+  0% {
+    transform: translateY(-200px) translateX(200px);
+  }
   100% {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateY(0) translateX(0);
   }
 }
+
 
 @media (max-width: 990px) {
   .hero-container {

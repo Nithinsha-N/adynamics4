@@ -11,117 +11,234 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-$("#south_africa").click(function () {
-  window.location.href = "../inidvidual-clases/cplsouth.html";
-});
-
-$("#south_africa").mouseover(function () {
-  $(".south-africa").show();
-});
-
-$("#south_africa").mouseout(function () {
-  setTimeout(function() {
-    $(".south-africa").fadeOut(1000);
-  }, 3000);
-});
-
-$("#usa").click(function () {
-  window.location.href = "../inidvidual-clases/cpltaring.html";
-});
-
-$("#usa").mouseover(function () {
-  $(".usa").show();
-});
-
-$("#usa").mouseout(function () {
-    setTimeout(function() {
-    $(".usa").fadeOut(1000);
-  }, 3000);
-});
-
-$("#argentina").click(function () {
-  window.location.href = "../inidvidual-clases/cplargentina.html";
-});
-
-$("#argentina").mouseover(function () {
-  $(".argentina").show();
-});
-
-$("#argentina").mouseout(function () {
-    setTimeout(function() {
-    $(".argentina").fadeOut(1000);
-  }, 3000);
-});
-
-$("#tunisia").click(function () {
-  window.location.href = "../inidvidual-clases/cpltunisia.html";
-});
-
-$("#tunisia").mouseover(function () {
-  $(".tunisia").show();
-});
-
-$("#tunisia").mouseout(function () {
-    setTimeout(function() {
-    $(".tunisia").fadeOut(1000);
-  }, 3000);
-});
-
-$("#morocco").click(function () {
-  window.location.href = "../inidvidual-clases/cplmorocco.html";
-});
-
-$("#morocco").mouseover(function () {
-  $(".morocco").show();
-});
-
-$("#morocco").mouseout(function () {
-    setTimeout(function() {
-    $(".morocco").fadeOut(1000);
-  }, 3000);
-});
-
-$("#india").click(function () {
-  window.location.href = "../inidvidual-clases/CONVESION.html";
-});
-
-$("#india").mouseover(function () {
-  $(".india").show();
-});
-
-$("#india").mouseout(function () {
-    setTimeout(function() {
-    $(".india").fadeOut(1000);
-  }, 3000);
-});
 
 
-function positionMarkers() {
-  const countryPaths = {
-    country1: document.getElementById('india'),
-    country2: document.getElementById('usa'),
-    country3: document.getElementById('south_africa'),
-    country4: document.getElementById('morocco'),
-    country5: document.getElementById('tunisia'),
-    country6: document.getElementById('argentina'),
-  };
-  
-  Object.keys(countryPaths).forEach(countryId => {
-      const countryPath = countryPaths[countryId];
-      const marker = document.getElementById(`marker${countryId.replace('country', '')}`);
+// Function to handle click and hover events for countries
+function setupCountryEvents(countryId, cardClass, url) {
+  // Store the fadeOut timeout ID to clear it when necessary
+  let fadeOutTimeout;
 
-      const bbox = countryPath.getBBox();
-      const centerX = bbox.x + bbox.width / 2; // Calculate center X
-      const centerY = bbox.y + bbox.height / 2; // Calculate center Y
+  // Click event to redirect to the specific URL
+  $(`#${countryId}`).click(function () {
+    window.location.href = url;
+  });
 
-      // Adjust marker position based on its size and special cases (e.g. Tunisia)
-      marker.setAttribute('x', centerX - marker.getAttribute('width') / 2 - 3);
-      marker.setAttribute('y', countryId === 'country5' ? centerY - marker.getAttribute('height') / 2 - 11 : centerY - marker.getAttribute('height') / 2 - 5);
+  // Mouseover event to show the card
+  $(`#${countryId}`).mouseover(function () {
+    clearTimeout(fadeOutTimeout); // Clear any existing timeout
+    $(".card").hide(); // Hide all cards
+    $(`.${cardClass}`).show(); // Show the relevant card
+  });
+
+  // Mouseout event to hide the card after a delay
+  $(`#${countryId}`).mouseout(function () {
+    fadeOutTimeout = setTimeout(function() {
+      $(`.${cardClass}`).fadeOut(1000);
+    }, 3000);
+  });
+
+  // Mouseover event to keep the card visible
+  $(`.${cardClass}`).mouseover(function () {
+    clearTimeout(fadeOutTimeout); // Clear the timeout to prevent hiding
+  });
+
+  // Mouseout event to hide the card after a delay
+  $(`.${cardClass}`).mouseout(function () {
+    fadeOutTimeout = setTimeout(function() {
+      $(`.${cardClass}`).fadeOut(1000);
+    }, 3000);
   });
 }
 
-// Call the positionMarkers function initially
-positionMarkers();
+// Setup events for each country
+setupCountryEvents("south_africa", "south-africa", "../inidvidual-clases/cplsouth.html");
+setupCountryEvents("usa", "usa", "../inidvidual-clases/cpltaring.html");
+setupCountryEvents("argentina", "argentina", "../inidvidual-clases/cplargentina.html");
+setupCountryEvents("tunisia", "tunisia", "../inidvidual-clases/cpltunisia.html");
+setupCountryEvents("morocco", "morocco", "../inidvidual-clases/cplmorocco.html");
+setupCountryEvents("india", "india", "../inidvidual-clases/CONVESION.html");
 
-// Update marker positions on window resize
-window.addEventListener('resize', positionMarkers);
+
+
+// function positionMarkers() {
+//   const countryPaths = {
+//     country1: document.getElementById('india'),
+//     country2: document.getElementById('usa'),
+//     country3: document.getElementById('south_africa'),
+//     country4: document.getElementById('morocco'),
+//     country5: document.getElementById('tunisia'),
+//     country6: document.getElementById('argentina'),
+//   };
+  
+//   Object.keys(countryPaths).forEach(countryId => {
+//       const countryPath = countryPaths[countryId];
+//       const marker = document.getElementById(`marker${countryId.replace('country', '')}`);
+
+//       const bbox = countryPath.getBBox();
+//       const centerX = bbox.x + bbox.width / 2; // Calculate center X
+//       const centerY = bbox.y + bbox.height / 2; // Calculate center Y
+
+//       // Adjust marker position based on its size and special cases (e.g. Tunisia)
+//       marker.setAttribute('x', centerX - marker.getAttribute('width') / 2 - 3);
+//       marker.setAttribute('y', countryId === 'country5' ? centerY - marker.getAttribute('height') / 2 - 11 : centerY - marker.getAttribute('height') / 2 - 5);
+//   });
+// }
+
+// // Call the positionMarkers function initially
+// positionMarkers();
+
+// // Update marker positions on window resize
+// window.addEventListener('resize', positionMarkers);
+
+ // Function to create a ripple animation
+ function createRippleAnimation(ripple, delay) {
+  gsap.fromTo(ripple, 
+      { attr: { r: 0, opacity: 1 } }, 
+      { attr: { r: 25, opacity: 0 }, 
+        duration: 2, 
+        ease: "power1.out", 
+        repeat: -1, 
+        delay: delay 
+      }
+  );
+}
+
+// Create ripple animations with delays
+createRippleAnimation(".ripple1", 0);
+createRippleAnimation(".ripple2", 0.5);
+createRippleAnimation(".ripple3", 1);
+
+// Function to animate a path
+function animatePath(path) {
+  const pathLength = path.getTotalLength();
+  gsap.set(path, {
+      strokeDasharray: pathLength,
+      strokeDashoffset: pathLength
+  });
+  gsap.to(path, {
+      strokeDashoffset: 0,
+      duration: 3,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true
+  });
+}
+
+// Animate the curved path from India to South Africa
+animatePath(document.getElementById("in-sa"));
+animatePath(document.getElementById("sa-usa"));
+animatePath(document.getElementById("ag-in"));
+animatePath(document.getElementById("mor-sa"));
+animatePath(document.getElementById("tun-ag"));
+animatePath(document.getElementById("mor-usa"));
+animatePath(document.getElementById("tun-in"));
+
+
+const viewBoxValues = {
+  india: "580 120 200 250",
+  south_africa: "400 280 200 250",
+  tunisia: "450 180 100 125",
+  morocco: "370 180 100 125",
+  argentina: "200 310 200 250",
+  usa: "100 100 200 250"
+};
+
+const countryOrder = ["india", "south_africa", "tunisia", "morocco", "argentina", "usa"];
+let currentIndex = 0;
+
+const svg = document.getElementById("world-map");
+const originalViewBox = svg.getAttribute("viewBox");
+const tooltip = document.getElementById("countryTooltip");
+
+function showTooltip(countryName) {
+  tooltip.textContent = countryName;
+  gsap.fromTo(tooltip, {opacity: 0}, {opacity: 1, duration: 0.5, display: 'block'});
+}
+
+function hideTooltip() {
+  gsap.to(tooltip, {opacity: 0, duration: 0.5, onComplete: () => {
+      tooltip.style.display = 'none';
+  }});
+}
+
+const updateViewBox = (index) => {
+  const country = countryOrder[index];
+  const newViewBox = viewBoxValues[country];
+  gsap.to(svg, { attr: { viewBox: newViewBox }, duration: 1, ease: "power2.inOut" });
+  const countryNames = {
+    "india": "India",
+    "south_africa": "South Africa",
+    "usa": "USA",
+    "argentina": "Argentina",
+    "tunisia": "Tunisia",
+    "morocco": "Morocco"
+};
+
+if (window.innerWidth < 578) {
+    showTooltip(countryNames[country]);
+} else {
+    hideTooltip();
+}
+
+};
+
+const resetViewBox = () => {
+  gsap.to(svg, { attr: { viewBox: originalViewBox }, duration: 1, ease: "power2.inOut" });
+};
+
+const handleResize = () => {
+  if (window.innerWidth < 578) {
+      updateViewBox(currentIndex);
+      $(".navigation-buttons").show();
+  } else {
+      resetViewBox();
+      $(".navigation-buttons").hide();
+      hideTooltip();
+  }
+};
+
+window.addEventListener("resize", handleResize);
+handleResize();
+
+let startX;
+
+const handleTouchStart = (event) => {
+  startX = event.touches[0].clientX;
+};
+
+const handleTouchEnd = (event) => {
+  const endX = event.changedTouches[0].clientX;
+  if (startX > endX + 50) {
+      // Swipe left
+      currentIndex = (currentIndex + 1) % countryOrder.length;
+  } else if (startX < endX - 50) {
+      // Swipe right
+      currentIndex = (currentIndex - 1 + countryOrder.length) % countryOrder.length;
+  }
+  if (window.innerWidth < 578) {
+      updateViewBox(currentIndex);
+  }
+};
+
+svg.addEventListener("touchstart", handleTouchStart);
+svg.addEventListener("touchend", handleTouchEnd);
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + countryOrder.length) % countryOrder.length;
+  if (window.innerWidth < 578) {
+      updateViewBox(currentIndex);
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % countryOrder.length;
+  if (window.innerWidth < 578) {
+      updateViewBox(currentIndex);
+  }
+});
+
+
+  
