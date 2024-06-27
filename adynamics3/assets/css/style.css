@@ -3303,6 +3303,7 @@ body {
     calc(var(--cd-color-3-l) * 0.9)
   );
   transition: border-color 0.3s;
+  margin: 0 1em;
 }
 .js .cd-h-timeline__navigation::after {
   content: "";

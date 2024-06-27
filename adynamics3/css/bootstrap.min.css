@@ -5888,35 +5888,35 @@ textarea.form-control-lg {
   .sticky-sm-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+
   }
 }
 @media (min-width: 768px) {
   .sticky-md-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+
   }
 }
 @media (min-width: 992px) {
   .sticky-lg-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+
   }
 }
 @media (min-width: 1200px) {
   .sticky-xl-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+
   }
 }
 @media (min-width: 1400px) {
   .sticky-xxl-top {
     position: sticky;
     top: 0;
-    z-index: 1020;
+
   }
 }
 .visually-hidden,

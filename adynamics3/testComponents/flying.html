@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adynamics</title>
     <!-- Favicon -->
-    <link href="./img/favicon.ico" rel="icon" />
+    <link href="../img/adynamicsLogo.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,6 +22,8 @@
     <!-- Libraries Stylesheet -->
     <link href="../lib/animate/animate.min.css" rel="stylesheet" />
     <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
@@ -51,7 +53,7 @@
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small class="fa-solid fa-phone text-primary me-2"></small>
                     <small>+91-8296076136</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
@@ -69,7 +71,7 @@
     <!-- Topbar End -->
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="../index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="../img/adynamicsLogo.png" width="180px" height="auto" alt="" />
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -78,10 +80,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="../index.html" class="nav-item nav-link ">Home</a>
-                <a href="../testComponents/about-hero.html" class="nav-item nav-link ">About</a>
+                <a href="../testComponents/about.html" class="nav-item nav-link ">About</a>
                 <a href="../testComponents/flying.html" class="nav-item nav-link active">Flying</a>
                 <div class="dropdown">
-                    <a href="../testComponents/clasess.html" class="nav-item nav-link nav-dropdown ">Classes</a>
+                    <a href="../testComponents/classes.html" class="nav-item nav-link nav-dropdown ">Classes</a>
                     <div class="dropdown-menu">
                         <a href="../inidvidual-clases/pretyping.html">A320 Pre Type Rating Class</a>
                         <a href="../inidvidual-clases/dgcaground.html">DGCA Ground Classes</a>
@@ -110,18 +112,18 @@
 
     <!-- Courses Start -->
 
-    <div class="container-xxl my-4 my-xl-6 py-6 pb-0">
+    <div class="container-xxl mt-4 my-xl-6 py-6 pb-0">
         <div class="container" style="margin-top:-70px ;">
-            <div class="text-center mx-auto mb-5" data-wow-delay="0.1s" style="max-width: 500px">
-                <h1 class="display-6 mb-4">
+            <div class="text-center mx-auto " data-wow-delay="0.1s" style="max-width: 500px">
+                <h1 class="display-6 ">
                     Our Global Network of Services
                 </h1>
             </div>
         </div>
     </div>
 
-    <div class="map">
-
+    <div class="map" id="map-container">
+        <div id="countryTooltip" class="country-tooltip"></div>
         <svg id="world-map" style="fill: #b9b9b9;" xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
             xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
@@ -756,23 +758,52 @@
             <path id="crete"
                 d="M516.76,230.59l1.63,0.05l0.68,1.01h2.37l1.58-0.58l0.53,0.64l-1.05,1.38l-4.63,0.16l-0.84-1.11l-0.89-0.53L516.76,230.59L516.76,230.59z" />
 
-            <!-- Markers -->
-            <image id="marker1" class="marker" x="145" y="145" width="20" height="20" xlink:href="../img/Location.svg">
-            </image>
-            <image id="marker2" class="marker" x="345" y="145" width="20" height="20" xlink:href="../img/Location.svg">
-            </image>
-            <image id="marker3" class="marker" x="545" y="145" width="20" height="20" xlink:href="../img/Location.svg">
-            </image>
-            <image id="marker4" class="marker" x="145" y="145" width="200" height="20" xlink:href="../img/Location.svg">
-            </image>
-            <image id="marker5" class="marker" x="345" y="145" width="20" height="20" xlink:href="../img/Location.svg">
-            </image>
-            <image id="marker6" class="marker" x="545" y="145" width="20" height="20" xlink:href="../img/Location.svg">
-            </image>
+            <!-- India marker-->
+            <circle class="ripple ripple1" cx="670" cy="285" r="30"></circle>
+            <circle class="ripple ripple2" cx="670" cy="285" r="15"></circle>
+            <circle class="ripple ripple3" cx="670" cy="285" r="4"></circle>
+
+            <!-- USA marker-->
+            <circle class="ripple ripple1" cx="180" cy="200" r="30"></circle>
+            <circle class="ripple ripple2" cx="180" cy="200" r="15"></circle>
+            <circle class="ripple ripple3" cx="180" cy="200" r="4"></circle>
+
+            <!-- South Africa marker-->
+            <circle class="ripple ripple1" cx="520" cy="430" r="30"></circle>
+            <circle class="ripple ripple2" cx="520" cy="430" r="15"></circle>
+            <circle class="ripple ripple3" cx="520" cy="430" r="4"></circle>
+
+            <!-- Morocco marker-->
+            <circle class="ripple ripple1" cx="420" cy="260" r="30"></circle>
+            <circle class="ripple ripple2" cx="420" cy="260" r="15"></circle>
+            <circle class="ripple ripple3" cx="420" cy="260" r="4"></circle>
+
+            <!-- Tunisia marker -->
+            <circle class="ripple ripple1" cx="480" cy="235" r="30"></circle>
+            <circle class="ripple ripple2" cx="480" cy="235" r="15"></circle>
+            <circle class="ripple ripple3" cx="480" cy="235" r="4"></circle>
+
+            <!-- Argentina marker -->
+            <circle class="ripple ripple1" cx="280" cy="450" r="30"></circle>
+            <circle class="ripple ripple2" cx="280" cy="450" r="15"></circle>
+            <circle class="ripple ripple3" cx="280" cy="450" r="4"></circle>
+
+            <!-- animating lines -->
+            <path id="in-sa" class="line" d="M670,285 Q550,300 520,430"></path>
+            <path id="sa-usa" class="line" d="M520,430 Q350,400 180,200"></path>
+            <path id="ag-in" class="line" d="M280,450 Q350,300 670,285"></path>
+            <path id="mor-sa" class="line" d="M420,260 Q450,250 520,430"></path>
+            <path id="tun-ag" class="line" d="M480,235 Q300,200 280,450"></path>
+            <path id="mor-usa" class="line" d="M420,260 Q350,150 180,200"></path>
+            <path id="tun-in" class="line" d="M480,235 Q550,150 670,285"></path>
+
         </svg>
+        <div class="navigation-buttons">
+            <button id="prevBtn"><i class="fa fa-chevron-left"></i></button>
+            <button id="nextBtn"><i class="fa fa-chevron-right"></i></button>
+        </div>            
 
-
-        <div class="india">
+         <div class=" card india">
             <div data-wow-delay="0.1s">
                 <div class="courses-item d-flex flex-column flex-xl-row arc-shadow overflow-hidden h-100">
                     <div class="text-center p-4">
@@ -803,7 +834,7 @@
                 </div>
             </div>
         </div>
-        <div class="usa">
+        <div class="card usa">
             <div data-wow-delay="0.1s">
                 <div class="courses-item d-flex flex-column flex-xl-row arc-shadow overflow-hidden h-100">
                     <div class="text-center p-4">
@@ -834,7 +865,7 @@
                 </div>
             </div>
         </div>
-        <div class="south-africa">
+        <div class="card south-africa">
             <div data-wow-delay="0.3s">
                 <div class="courses-item d-flex flex-column flex-xl-row arc-shadow overflow-hidden h-100">
                     <div class="text-center p-4">
@@ -866,7 +897,7 @@
                 </div>
             </div>
         </div>
-        <div class="morocco">
+        <div class="card morocco">
             <div data-wow-delay="0.1s">
                 <div class="courses-item d-flex flex-column flex-xl-row arc-shadow overflow-hidden h-100">
                     <div class="text-center p-4">
@@ -897,7 +928,7 @@
                 </div>
             </div>
         </div>
-        <div class="argentina">
+        <div class="card argentina">
             <div data-wow-delay="0.3s">
                 <div class="courses-item d-flex flex-column flex-xl-row arc-shadow overflow-hidden h-100">
                     <div class="text-center p-4">
@@ -929,7 +960,7 @@
                 </div>
             </div>
         </div>
-        <div class="tunisia">
+        <div class="card tunisia">
             <div class="d-flex gap-3">
                 <div data-wow-delay="0.3s">
                     <div class="courses-item d-flex flex-column arc-shadow overflow-hidden">
@@ -983,60 +1014,7 @@
         </div>
     </div>
 
-    <div class="mobile-view">
-
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <h2>CPL cum Type Rating in Tunisia</h2>
-                    <img src="../assets/img/tunisia.png" class="d-block w-100" alt="..." style="padding: 10px 30px">
-                    <a href="../inidvidual-clases/cpltunisia.html">Learn More</a>
-                </div>
-                <div class="carousel-item">
-                    <h2>FAA CPL Training in USA</h2>
-                    <img src="../assets/img/usa.png" class="d-block w-100" alt="..." style="padding: 75px 10px">
-                    <a href="../inidvidual-clases/cpltaring.html">Learn More</a>
-                </div>
-                <div class="carousel-item">
-                    <h2>DGCA CPL Conversion in India</h2>
-                    <img src="../assets/img/india.png" class="d-block w-100" alt="..." style="padding: 15px 0">
-                    <a href="../inidvidual-clases/CONVESION.html">Learn More</a>
-                </div>
-                <div class="carousel-item">
-                    <h2>B737 Type Rating in Morocco</h2>
-                    <img src="../assets/img/morocco.png" class="d-block w-100" alt="..." style="padding: 10px 10px">
-                    <a href="../inidvidual-clases/cplmorocco.html">Learn More</a>
-                </div>
-                <div class="carousel-item">
-                    <h2>ANAC CPL Training in Argentina</h2>
-                    <img src="../assets/img/argentina.png" class="d-block w-100" alt="..." style="padding: 10px 30px">
-                    <a href="../inidvidual-clases/cplargentina.html">Learn More</a>
-                </div>
-                <div class="carousel-item">
-                    <h2>SACAA CPL Training in South Africa</h2>
-                    <img src="../assets/img/south_africa.png" class="d-block w-100" alt="..." style="padding: 75px 10px">
-                    <a href="../inidvidual-clases/cplsouth.html">Learn More</a>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-
-
-    <!-- cource end  -->
-
     <!-- demo-class start -->
-
-
 
     <section class="demo-class-section imSection-bg" style="background-color:transparent">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
@@ -1111,7 +1089,7 @@
                 <li><a href="#">DGCA Ground Classes</a></li>
                 <li><a href="#">Radio Telephony (RTR) Class</a></li>
                 <li><a href="#">NIOS Prep Class</a></li>
-                <li><a href="#">cpl conversion</a></li>
+                <li><a href="#">CPL Conversion</a></li>
                 <li><a href="#">sacAA CPL</a></li>
               </ul>
             </div>
@@ -1121,12 +1099,12 @@
               style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
               <h3 class="f-title f_600 t_color f_size_18">Help</h3>
               <ul class="list-unstyled f_list">
-                <li><a href="./testComponents/about-hero.html">About us</a></li>
+                <li><a href="./testComponents/about.html">About us</a></li>
                 <li><a href="#testi">Testimonial</a></li>
                 <li><a href="#teamm">Team</a></li>
-                <li><a href="#demo">Demo Vedio</a></li>
-                <li><a href="./testComponents/about-hero.html">Contact</a></li>
-                <li><a href="./testComponents/clasess.html">Training</a></li>
+                <li><a href="#demo">Demo video</a></li>
+                <li><a href="./testComponents/about.html">Contact</a></li>
+                <li><a href="./testComponents/classes.html">Training</a></li>
               </ul>
             </div>
           </div>
@@ -1161,6 +1139,12 @@
     <script src="../lib/easing/easing.min.js"></script>
     <script src="../lib/waypoints/waypoints.min.js"></script>
     <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+
+
+
 
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
