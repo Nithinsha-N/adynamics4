@@ -122,7 +122,6 @@ path:hover {
 
 .ripple {
   fill: #1a6969;
-  /* stroke: #00f; */
   pointer-events: none;
   z-index: 3;
 }
@@ -140,7 +139,7 @@ line:hover {
 }
 
 .map {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   height: auto;
   position: relative;
@@ -185,18 +184,12 @@ line:hover {
   width: 100%;
   height: auto;
   position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
 }
 
 #india,#usa,#argentina,#morocco,#tunisia,#south_africa {
   fill: #46aaaa;
-}
-
-@media (max-width: 578px) {
-  .map svg {
-    /* border: 2px solid red; */
-    border-radius: 2rem;
-    overflow: hidden;
-  }
 }
 
 .country-tooltip {

@@ -11,12 +11,15 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-
-
 // Function to handle click and hover events for countries
 function setupCountryEvents(countryId, cardClass, url) {
   // Store the fadeOut timeout ID to clear it when necessary
   let fadeOutTimeout;
+
+  // Function to check screen width
+  function isScreenLargeEnough() {
+    return window.innerWidth >= 578;
+  }
 
   // Click event to redirect to the specific URL
   $(`#${countryId}`).click(function () {
@@ -25,28 +28,36 @@ function setupCountryEvents(countryId, cardClass, url) {
 
   // Mouseover event to show the card
   $(`#${countryId}`).mouseover(function () {
-    clearTimeout(fadeOutTimeout); // Clear any existing timeout
-    $(".card").hide(); // Hide all cards
-    $(`.${cardClass}`).show(); // Show the relevant card
+    if (isScreenLargeEnough()) {
+      clearTimeout(fadeOutTimeout); // Clear any existing timeout
+      $(".card").hide(); // Hide all cards
+      $(`.${cardClass}`).show(); // Show the relevant card
+    }
   });
 
   // Mouseout event to hide the card after a delay
   $(`#${countryId}`).mouseout(function () {
-    fadeOutTimeout = setTimeout(function() {
-      $(`.${cardClass}`).fadeOut(1000);
-    }, 3000);
+    if (isScreenLargeEnough()) {
+      fadeOutTimeout = setTimeout(function() {
+        $(`.${cardClass}`).fadeOut(1000);
+      }, 3000);
+    }
   });
 
   // Mouseover event to keep the card visible
   $(`.${cardClass}`).mouseover(function () {
-    clearTimeout(fadeOutTimeout); // Clear the timeout to prevent hiding
+    if (isScreenLargeEnough()) {
+      clearTimeout(fadeOutTimeout); // Clear the timeout to prevent hiding
+    }
   });
 
   // Mouseout event to hide the card after a delay
   $(`.${cardClass}`).mouseout(function () {
-    fadeOutTimeout = setTimeout(function() {
-      $(`.${cardClass}`).fadeOut(1000);
-    }, 3000);
+    if (isScreenLargeEnough()) {
+      fadeOutTimeout = setTimeout(function() {
+        $(`.${cardClass}`).fadeOut(1000);
+      }, 3000);
+    }
   });
 }
 
@@ -58,39 +69,6 @@ setupCountryEvents("tunisia", "tunisia", "../inidvidual-clases/cpltunisia.html")
 setupCountryEvents("morocco", "morocco", "../inidvidual-clases/cplmorocco.html");
 setupCountryEvents("india", "india", "../inidvidual-clases/CONVESION.html");
 
-
-
-// function positionMarkers() {
-//   const countryPaths = {
-//     country1: document.getElementById('india'),
-//     country2: document.getElementById('usa'),
-//     country3: document.getElementById('south_africa'),
-//     country4: document.getElementById('morocco'),
-//     country5: document.getElementById('tunisia'),
-//     country6: document.getElementById('argentina'),
-//   };
-  
-//   Object.keys(countryPaths).forEach(countryId => {
-//       const countryPath = countryPaths[countryId];
-//       const marker = document.getElementById(`marker${countryId.replace('country', '')}`);
-
-//       const bbox = countryPath.getBBox();
-//       const centerX = bbox.x + bbox.width / 2; // Calculate center X
-//       const centerY = bbox.y + bbox.height / 2; // Calculate center Y
-
-//       // Adjust marker position based on its size and special cases (e.g. Tunisia)
-//       marker.setAttribute('x', centerX - marker.getAttribute('width') / 2 - 3);
-//       marker.setAttribute('y', countryId === 'country5' ? centerY - marker.getAttribute('height') / 2 - 11 : centerY - marker.getAttribute('height') / 2 - 5);
-//   });
-// }
-
-// // Call the positionMarkers function initially
-// positionMarkers();
-
-// // Update marker positions on window resize
-// window.addEventListener('resize', positionMarkers);
-
- // Function to create a ripple animation
  function createRippleAnimation(ripple, delay) {
   gsap.fromTo(ripple, 
       { attr: { r: 0, opacity: 1 } }, 
