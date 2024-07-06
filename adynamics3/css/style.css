@@ -194,7 +194,8 @@ nav {
 
 .courses-item {
   border-radius: 8px;
-  background-color: rgba(240, 240, 240, 0.396);
+  /* background-color: rgba(240, 240, 240, 0.396); */
+  background-color: white;
 }
 
 .courses-item .courses-overlay {
@@ -253,7 +254,7 @@ nav {
 }
 
 .demo-class-joinBtn:hover {
-  background-color: #75d5d5;
+  background-color: #3d8b8b;
   color: white;
 }
 

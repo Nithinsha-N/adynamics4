@@ -1,11 +1,11 @@
 .hero-btn-course-details {
   background-color: #49aaaa;
-  color: rgba(255, 255, 255, 0.851);
+  color: white;
   font-weight: 800;
   border: none;
 }
 .hero-btn-course-details:hover {
-  background-color: #75d5d5;
+  background-color: #3d8b8b;
   color: white;
 }
 

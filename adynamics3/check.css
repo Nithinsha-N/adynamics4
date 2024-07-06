@@ -34,14 +34,10 @@ body {
     border-width: 1px;
     margin-top: 20px;
 }
-.btn_get_two:hover {
-    background: transparent;
-    color: #49aaaa;
-}
+
 .btn_get:hover {
     color: #fff;
-    background: #49aaaa;
-    border-color: #6754e2;
+    background-color: #3d8b8b;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -54,6 +50,8 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
     color: #49aaaa;
+    letter-spacing: 1px;
+    box-shadow: none;
 }
 .new_footer_top .f_widget.about-widget .f_list li {
     margin-bottom: 11px;
@@ -111,8 +109,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .btn_get_two:hover {
-    background: transparent;
-    color: #49aaaa;
+    background-color: #3d8b8b;
 }
 
 .new_footer_top .f_social_icon a:hover {
