@@ -241,7 +241,7 @@ body {
 }
 
 .btn-primary:is(:hover, :focus) {
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: #3d8b8b;
 }
 
 .flex-btn {

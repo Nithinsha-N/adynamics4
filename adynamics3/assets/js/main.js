@@ -298,4 +298,31 @@ document.addEventListener('DOMContentLoaded', function () {
 	  });
   });
 });
-  
+
+// document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+//     e.preventDefault();
+    
+//     const form = e.target;
+//     const data = {
+//         name: form.name.value,
+//         phone: form.phone.value,
+//         email: form.email.value,
+//         course: form.course.value,
+//         message: form.message.value
+//     };
+    
+//     fetch('https://script.google.com/macros/s/AKfycbz0HgvkGfh3g7vqEpRzRIMZuuRkbJujHcEsoN2elbhF5V4iNcNpyMxJhO31gPm6ZYrctw/exec', {
+//     redirect: "follow",
+//       method: "POST",
+//       body: JSON.stringify(data),
+//       headers: {
+//         "Content-Type": "text/plain;charset=utf-8",
+//         }
+//     }).then(response => response.json()).then(data => {
+//         alert('Form submitted successfully!');
+//         form.reset();
+//     }).catch(error => {
+//         console.error('Error:', error);
+//         alert('There was an error submitting the form.');
+//     });
+// });

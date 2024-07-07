@@ -62,12 +62,12 @@ function setupCountryEvents(countryId, cardClass, url) {
 }
 
 // Setup events for each country
-setupCountryEvents("south_africa", "south-africa", "../inidvidual-clases/cplsouth.html");
-setupCountryEvents("usa", "usa", "../inidvidual-clases/cpltaring.html");
-setupCountryEvents("argentina", "argentina", "../inidvidual-clases/cplargentina.html");
-setupCountryEvents("tunisia", "tunisia", "../inidvidual-clases/cpltunisia.html");
-setupCountryEvents("morocco", "morocco", "../inidvidual-clases/cplmorocco.html");
-setupCountryEvents("india", "india", "../inidvidual-clases/CONVESION.html");
+setupCountryEvents("south_africa", "south-africa", "../individual-classes/cplsouth.html");
+setupCountryEvents("usa", "usa", "../individual-classes/cpltraining.html");
+setupCountryEvents("argentina", "argentina", "../individual-classes/cplargentina.html");
+setupCountryEvents("tunisia", "tunisia", "../individual-classes/cpltunisia.html");
+setupCountryEvents("morocco", "morocco", "../individual-classes/cplmorocco.html");
+setupCountryEvents("india", "india", "../individual-classes/conversion.html");
 
  function createRippleAnimation(ripple, delay) {
   gsap.fromTo(ripple, 
